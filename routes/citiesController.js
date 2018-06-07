@@ -42,13 +42,24 @@ router.get('/:name/edit', (req, res)=>{
 router.put("/:name", (req,res)=>{
     City.findOne({name:req.params.name})
     .then((city)=>{
-        let id = city._id
-       return City.findByIdAndUpdate(id, req.body, {new :true})
+       return City.findByIdAndUpdate(city._id, req.body, {new :true})
        console.log(req.body)
        
     })
     .then((city)=>{
         res.redirect(`/cities/${city.name}`)
+    })
+})
+
+router.delete("/:name", (req,res)=>{
+    City.findOne({name:req.params.name})
+    .then((city)=>{
+        return City.findByIdAndRemove(city._id)
+        console.log("WOHO!")
+    })
+    .then(()=>{
+        res.redirect('/cities')
+        alert("city successfully deleted.")
     })
 })
 

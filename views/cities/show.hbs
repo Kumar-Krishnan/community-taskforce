@@ -4,4 +4,8 @@
     <p>
         {{city.description}}
     </p>
+
+    <form method="post" action="/cities/{{city.name}}?_method=DELETE">
+        <button type="submit">DELETE</button>
+    </form>
 </div>
