@@ -30,4 +30,12 @@ router.get('/:name', (req, res)=>{
     })
 })
 
+router.get('/:name/edit', (req, res)=>{
+    City.findOne({name:req.params.name})
+    .then((city)=>{
+        res.render('cities/edit' , {city})
+    })
+
+})
+
 module.exports=router

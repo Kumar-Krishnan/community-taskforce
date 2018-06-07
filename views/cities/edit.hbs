@@ -1,22 +1,22 @@
-<h1>Edit your city's profile here!</h1>
+<h1>Edit {{city.name}}'s profile here!</h1>
 
 <div>
     <form action="/cities/{{city.name}}?_method=PUT" method="post">
         <div>
             <label for="name">City Name:</label>
-            <input type="text" name="name" value="{{city.name}}"/>
+            <input type="text" name="name" value={{city.name}}/>
         </div>
         <div>
             <label for="description">City description:</label>
-            <input type="text" name="description" value="{{city.description}}"/>
+            <input type="text" name="description" value={{city.description}}/>
         </div>
         <div>
             <label for="zipcode">City zipcode:</label>
-            <input type="text" name="zipcode" value="{{city.zipcode}}"/>
+            <input type="text" name="zipcode" value={{city.zipcode}}/>
         </div>
         <div>
             <label for="image">City Image:</label>
-            <input type="text" name="image" value="{{city.image}}"/>
+            <input type="text" name="image" value={{city.image}}/>
         </div>
         
         <button type="submit">Edit Your City!</button>
