@@ -11,4 +11,9 @@ router.get('/', (req,res)=>{
     .catch((err) => res.send(err))
 })
 
+router.get('/new', (req,res)=>{
+    res.render('cities/new')
+})
+
+
 module.exports=router
