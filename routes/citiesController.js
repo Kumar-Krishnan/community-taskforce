@@ -34,8 +34,28 @@ router.get('/:name/edit', (req, res)=>{
     City.findOne({name:req.params.name})
     .then((city)=>{
         res.render('cities/edit' , {city})
+        console.log(city)
     })
 
 })
 
+router.put("/:name", (req,res)=>{
+    City.findOne({name:req.params.name})
+    .then((city)=>{
+        let id = city._id
+       return City.findByIdAndUpdate(id, req.body, {new :true})
+       console.log(req.body)
+       
+    })
+    .then((city)=>{
+        res.redirect(`/cities/${city.name}`)
+    })
+})
+
 module.exports=router
+
+// City.findById(id)
+// .then(()=>{
+    
+// })
+// res.redirect(`/cities/${req.params.name}`)

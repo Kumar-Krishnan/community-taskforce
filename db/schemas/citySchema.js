@@ -3,16 +3,16 @@ const Schema = require('mongoose').Schema
 const citySchema = new Schema ({
     name: {
         type: String,
-        required: true
+        // required: true
     },
     zipcode: {
-        type: Number,
-        required: true 
+        type: String,
+        // required: true 
     },
     description: String,
     image: {
         type: String,
-        required: true
+        // required: true
     }
     // issues: [issueSchema]
 })
