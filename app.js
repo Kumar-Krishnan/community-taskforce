@@ -9,6 +9,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const mongoose = require('mongoose')
 const app = express();
+const citiesController = require('./routes/citiesController')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req,res)=>{
   res.render('index', {title: "jesus"})
 });
+
+app.use('/cities', citiesController)
 
 
 
