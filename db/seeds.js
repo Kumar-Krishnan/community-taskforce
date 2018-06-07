@@ -28,9 +28,9 @@ City.remove()
               image: "https://en.wikipedia.org/wiki/Meenakshi_Temple#/media/File:Temple_de_M%C3%AEn%C3%A2ksh%C3%AE01.jpg"
           })
 
-          const citys= [city1,city2]
+          const cities= [city1,city2]
 
-          return City.insertMany(citys)
+          return City.insertMany(cities)
       })
       .then(()=>{
           //close the database connection

@@ -11,7 +11,7 @@ const citySchema = new Schema ({
     },
     description: String,
     image: {
-        typeof: String,
+        type: String,
         required: true
     }
     // issues: [issueSchema]
