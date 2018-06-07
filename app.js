@@ -10,6 +10,7 @@ const usersRouter = require('./routes/users');
 const mongoose = require('mongoose')
 const app = express();
 const citiesController = require('./routes/citiesController')
+const issuesController = require('./routes/issuesController')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,6 +31,7 @@ app.get('/', (req,res)=>{
 });
 
 app.use('/cities', citiesController)
+app.use('/:cities/issues', issuesController)
 
 
 
