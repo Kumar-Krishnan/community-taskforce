@@ -15,5 +15,12 @@ router.get('/new', (req,res)=>{
     res.render('cities/new')
 })
 
+router.post('/', (req,res)=>{
+    const newCity = req.body
+    City.create(newCity)
+    .then(()=>{
+        res.redirect('/cities')
+    })
+})
 
 module.exports=router
