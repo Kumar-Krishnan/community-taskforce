@@ -23,4 +23,11 @@ router.post('/', (req,res)=>{
     })
 })
 
+router.get('/:name', (req, res)=>{
+    City.findOne({name:req.params.name})
+    .then((city)=>{
+        res.render('cities/show', {city})
+    })
+})
+
 module.exports=router
