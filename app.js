@@ -28,8 +28,6 @@ app.use('/users', usersRouter);
 
 //listeners
 mongoose.connect(process.env.MONGODB_URI)
-const mongoose = 
-
 
 
 
