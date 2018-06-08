@@ -4,7 +4,9 @@
     <ul>
         {{#each issues}}
         <li>
+            <a href="/cities/{{cityName}}/issues/{{@index}}">
             {{name}}
+            </a>
         </li>
         {{/each}}
     </ul>
