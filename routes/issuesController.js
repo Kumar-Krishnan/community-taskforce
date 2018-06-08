@@ -42,7 +42,6 @@ router.post('/', (req,res)=>{
 router.get('/:issue', (req,res)=>{
     City.findOne({name:req.params.cityName})
     .then((city)=>{
-        console.log(city)
        issueIndex = req.params.issue
        issue = city.issues[issueIndex]
        res.render(`issues/show`,{issue})
@@ -50,23 +49,39 @@ router.get('/:issue', (req,res)=>{
 })
 
 router.get('/:issue/edit', (req,res)=>{
+    cityName = req.params.cityName
     City.findOne({name:req.params.cityName})
     .then((city)=>{
-        console.log(city)
        issueIndex = req.params.issue
        issue = city.issues[issueIndex]
-       res.render(`issues/edit`,{issue})
+       res.render(`issues/edit`,{issue, cityName,issueIndex})
     })
 })
 
 router.put('/:issue/', (req,res)=>{
+    const cityName = req.params.cityName
+    const issueIndex = req.params.issue
     City.findOne({name:req.params.cityName})
     .then((city)=>{
-        console.log(city)
-       issueIndex = req.params.issue
-       issue = city.issues[issueIndex]
-       Issue.findByIdAndUpdate(issue._id, req.body, {new:true})
-       res.render(`issues/edit`,{issue})
+       
+    //    let  issue = city.issues[issueIndex]
+        city.issues[issueIndex] = req.body
+
+       console.log(issueIndex)
+       console.log(city.issues)
+       console.log(issue)
+    //    console.log(city)
+    //    console.log(req.body)
+    //    console.log(issue._id)
+       return city.save()
+
+    })
+    .then((saved)=>{
+        console.log(saved)
+        res.redirect(`/cities/${cityName}/issues/${issueIndex}`)
+    })
+    .catch((err)=>{
+        console.log(err, "Error")
     })
 })
 module.exports=router
