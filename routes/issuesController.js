@@ -40,11 +40,12 @@ router.post('/', (req,res)=>{
 })
 
 router.get('/:issue', (req,res)=>{
+    const cityName = req.params.cityName
     City.findOne({name:req.params.cityName})
     .then((city)=>{
        issueIndex = req.params.issue
        issue = city.issues[issueIndex]
-       res.render(`issues/show`,{issue})
+       res.render(`issues/show`,{issue, cityName, issueIndex})
     })
 })
 
@@ -58,21 +59,12 @@ router.get('/:issue/edit', (req,res)=>{
     })
 })
 
-router.put('/:issue/', (req,res)=>{
+router.put('/:issue', (req,res)=>{
     const cityName = req.params.cityName
     const issueIndex = req.params.issue
     City.findOne({name:req.params.cityName})
     .then((city)=>{
-       
-    //    let  issue = city.issues[issueIndex]
         city.issues[issueIndex] = req.body
-
-       console.log(issueIndex)
-       console.log(city.issues)
-       console.log(issue)
-    //    console.log(city)
-    //    console.log(req.body)
-    //    console.log(issue._id)
        return city.save()
 
     })
@@ -83,5 +75,20 @@ router.put('/:issue/', (req,res)=>{
     .catch((err)=>{
         console.log(err, "Error")
     })
+})
+
+router.delete('/:issue', (req,res)=>{
+    const cityName = req.params.cityName
+    const issueIndex = req.params.issue
+
+    City.findOne({name:req.params.cityName})
+    .then((city)=>{
+        city.issues.splice(issueIndex,1)
+        return city.save()
+    })
+    .then((saved)=>{
+        res.redirect(`/cities/${cityName}/issues`)
+    })
+
 })
 module.exports=router
