@@ -13,8 +13,8 @@ const citySchema = new Schema ({
     image: {
         type: String,
         // required: true
-    }
-    // issues: [issueSchema]
+    },
+    issues: [issueSchema]
 })
 
 module.exports = citySchema
