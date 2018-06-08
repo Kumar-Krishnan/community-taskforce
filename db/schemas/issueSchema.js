@@ -15,8 +15,12 @@ const issueSchema = new Schema({
     numberOfTaskForcesNeeded: Number,
     progressTowardsGoal: {
         type: Number,
-        value: (this.numberOfTaskForcesNeeded/this.taskforces)*100},
-    taskforces: Number
+        value: (this.numberOfTaskForcesNeeded/this.taskforces)*100
+    },
+    taskforces: {
+        type: Number,
+        default: 0
+    }
     // taskforces:[taskforceSchema]
 })
 

@@ -19,15 +19,20 @@ router.get('/', (req,res, next)=>{
     })
 })
 
+
+
+router.get('/new', (req,res)=>{
+    cityName = req.params.cityName
+    res.render('issues/new',{cityName})
+})
+
 router.get('/:issue', (req,res)=>{
     City.findOne({name:req.params.cityName})
     .then((city)=>{
+        console.log(city)
        issueIndex = req.params.issue
        issue = city.issues[issueIndex]
-       res.render(`/issues/show`)
+       res.render(`issues/show`,{issue})
     })
 })
-
-
-
 module.exports=router
