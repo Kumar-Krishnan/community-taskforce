@@ -10,14 +10,9 @@ const issueSchema = new Schema({
         type: String,
         required: true
     },
-    image: String,
     description: String,
-    numberOfTaskForcesNeeded: Number,
-    progressTowardsGoal: {
-        type: Number,
-        value: (this.numberOfTaskForcesNeeded/this.taskforces)*100
-    },
-    taskforces: {
+    numberOfVolunteersNeeded: Number,
+    volunteers: {
         type: Number,
         default: 0
     }

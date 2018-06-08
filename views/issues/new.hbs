@@ -5,20 +5,24 @@
     {{cityName}}
     <form action="/cities/" method="post">
         <div>
-            <label for="name">City Name:</label>
-            <input type="text" name="name" placeholder="City Name"/>
+            <label for="name">name:</label>
+            <input type="text" name="name" placeholder="Issue Name"/>
         </div>
         <div>
-            <label for="description">City description:</label>
-            <input type="text" name="description" placeholder="City Description"/>
+            <label for="city">City</label>
+            <input type="text" name="city" placeholder="city name"/>
         </div>
         <div>
-            <label for="zipcode">City zipcode:</label>
-            <input type="text" name="zipcode" placeholder="zipcode"/>
+            <label for="description">Issue description:</label>
+            <input type="text" name="description" placeholder="Issue Description"/>
         </div>
         <div>
-            <label for="image">City Image:</label>
-            <input type="text" name="image" placeholder="City image"/>
+            <label for="volunteers">Volunteers Needed Amount:</label>
+            <input type="text" name="numberOfVolunteersNeeded" placeholder="volunteers needed"/>
+        </div>
+        <div>
+            <label for="volunteers">Number of Volunteers On Current Issue:</label>
+            <input type="text" name="volunteers" placeholder="volunteers"/>
         </div>
         
         <button type="submit">Create Your City!</button>

@@ -18,21 +18,17 @@ City.remove()
         const issue1 = new Issue({
             name: "Public Wifi",
             city: "San Paulo",
-            image: "Jesus",
             description: "Buddha",
-            numberOfTaskForcesNeeded: 4,
-            progressTowardsGoal: (this.numberOfTaskForcesNeeded/this.taskforces)*100,
-            taskforces: 6    
+            numberOfVolunteersNeeded: 4,
+            Volunteers: 6    
         })
 
         const issue2 = new Issue({
             name: "Hydroponics",
             city: "Atlanta",
-            image: "What is love",
             description: "baby don't hurt me",
-            numberOfTaskForcesNeeded: 5,
-            progressTowardsGoal: (this.numberOfTaskForcesNeeded/this.taskforces)*100,
-            taskforces: 6    
+            numberOfVolunteersNeeded: 5,
+            volunteers: 6    
         })
 
         const city1 = new City({
