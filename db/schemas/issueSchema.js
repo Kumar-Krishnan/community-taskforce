@@ -13,9 +13,10 @@ const issueSchema = new Schema({
     image: String,
     description: String,
     numberOfTaskForcesNeeded: Number,
-    numberOfTaskForcesActive: this.taskforces.length,
-    progressTowardsGoal: (this.numberOfTaskForcesNeeded/this.numberOfTaskForcesActive)*100,
-    taskforce: 6
+    progressTowardsGoal: {
+        type: Number,
+        value: (this.numberOfTaskForcesNeeded/this.taskforces)*100},
+    taskforces: Number
     // taskforces:[taskforceSchema]
 })
 

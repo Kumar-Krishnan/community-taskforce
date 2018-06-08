@@ -21,9 +21,8 @@ City.remove()
             image: "Jesus",
             description: "Buddha",
             numberOfTaskForcesNeeded: 4,
-            numberOfTaskForcesActive: this.taskforces.length,
-            progressTowardsGoal: (this.numberOfTaskForcesNeeded/this.numberOfTaskForcesActive)*100,
-            taskforce: 6    
+            progressTowardsGoal: (this.numberOfTaskForcesNeeded/this.taskforces)*100,
+            taskforces: 6    
         })
 
         const issue2 = new Issue({
@@ -32,9 +31,8 @@ City.remove()
             image: "What is love",
             description: "baby don't hurt me",
             numberOfTaskForcesNeeded: 5,
-            numberOfTaskForcesActive: this.taskforces.length,
-            progressTowardsGoal: (this.numberOfTaskForcesNeeded/this.numberOfTaskForcesActive)*100,
-            taskforce: 6    
+            progressTowardsGoal: (this.numberOfTaskForcesNeeded/this.taskforces)*100,
+            taskforces: 6    
         })
 
         const city1 = new City({

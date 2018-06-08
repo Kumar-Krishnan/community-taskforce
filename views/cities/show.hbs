@@ -4,6 +4,19 @@
     <p>
         {{city.description}}
     </p>
+    <a href="/cities/{{city.name}}/issues">
+    <div>
+    
+        <ul>
+            {{#each city.issues}}
+            <li>
+                {{name}}
+            </li>
+                {{/each}}
+        </ul>
+    
+    </div>
+    </a>
 
     <form method="post" action="/cities/{{city.name}}?_method=DELETE">
         <button type="submit">DELETE</button>

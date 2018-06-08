@@ -1,5 +1,5 @@
 const Schema = require('mongoose').Schema
-// const issueSchema = require('./issueSchema')
+const issueSchema = require('./issueSchema')
 const citySchema = new Schema ({
     name: {
         type: String,

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const issueSchema = require('../db/schemas/issueSchema')
 
-const Issue = mongoose.model('city', issueSchema)
+const Issue2 = mongoose.model('issue', issueSchema)
 
-module.exports = Issue
+module.exports = Issue2
