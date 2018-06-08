@@ -31,7 +31,7 @@ app.get('/', (req,res)=>{
 });
 
 app.use('/cities', citiesController)
-app.use('/:cities/issues', issuesController)
+app.use('/cities/:cityName/issues', issuesController)
 
 
 
