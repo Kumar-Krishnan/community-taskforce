@@ -3,7 +3,7 @@
 
 <div>
     {{cityName}}
-    <form action="/cities/" method="post">
+    <form action="/cities/{{cityName}}/issues/" method="post">
         <div>
             <label for="name">name:</label>
             <input type="text" name="name" placeholder="Issue Name"/>

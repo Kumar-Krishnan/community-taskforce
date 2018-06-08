@@ -26,6 +26,19 @@ router.get('/new', (req,res)=>{
     res.render('issues/new',{cityName})
 })
 
+router.post('/', (req,res)=>{
+    newIssue = new Issue(req.body)
+    cityName = req.params.cityName
+    City.findOne({name:cityName})
+    .then((city)=>{
+        city.issues.push(newIssue)
+        return city.save()
+    })
+    .then(()=>{
+        res.redirect(`/cities/${cityName}/issues`)
+    })
+})
+
 router.get('/:issue', (req,res)=>{
     City.findOne({name:req.params.cityName})
     .then((city)=>{
