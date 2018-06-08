@@ -48,4 +48,25 @@ router.get('/:issue', (req,res)=>{
        res.render(`issues/show`,{issue})
     })
 })
+
+router.get('/:issue/edit', (req,res)=>{
+    City.findOne({name:req.params.cityName})
+    .then((city)=>{
+        console.log(city)
+       issueIndex = req.params.issue
+       issue = city.issues[issueIndex]
+       res.render(`issues/edit`,{issue})
+    })
+})
+
+router.put('/:issue/', (req,res)=>{
+    City.findOne({name:req.params.cityName})
+    .then((city)=>{
+        console.log(city)
+       issueIndex = req.params.issue
+       issue = city.issues[issueIndex]
+       Issue.findByIdAndUpdate(issue._id, req.body, {new:true})
+       res.render(`issues/edit`,{issue})
+    })
+})
 module.exports=router
