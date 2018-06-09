@@ -1,0 +1,30 @@
+<h1>Please Edit Issues Submitted Here!</h1>
+
+
+<div>
+    {{cityName}}
+    <form action="/cities/{{cityName}}/issues/{{issueIndex}}?_method=PUT" method="post">
+        <div>
+            <label for="name">name:</label>
+            <input type="text" name="name" value="{{issue.name}}"/>
+        </div>
+        <div>
+            <label for="city">City</label>
+            <input type="text" name="city" value="{{issue.city}}"/>
+        </div>
+        <div>
+            <label for="description">Issue description:</label>
+            <input type="text" name="description" value="{{issue.description}}"/>
+        </div>
+        <div>
+            <label for="volunteers">Volunteers Needed Amount:</label>
+            <input type="text" name="numberOfVolunteersNeeded" value="{{issue.numberOfVolunteersNeeded}}"/>
+        </div>
+        <div>
+            <label for="volunteers">Number of Volunteers On Current Issue:</label>
+            <input type="text" name="volunteers" value="{{issue.volunteers}}"/>
+        </div>
+        
+        <button type="submit">Edit Issue!</button>
+    </form>
+</div>

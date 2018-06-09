@@ -1,0 +1,14 @@
+
+
+<div>
+    <ul>
+        {{#each volunteers}}
+        <li>
+            <a href="/cities/{{../cityName}}/issues/{{../issueIndex}}/volunteers/{{@index}}">
+            {{name}}
+            {{description}}
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</div>

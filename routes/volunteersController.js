@@ -11,7 +11,7 @@ router.get('/', (req,res)=>{
     City.findOne({name:req.params.cityName})
     .then((city)=>{
         volunteers = city.issues[issueIndex].volunteers
-        res.send(`${volunteers}`)
+        res.render('volunteers/index', {volunteers,cityName,issueIndex})
     })
    
 })

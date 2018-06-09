@@ -1,0 +1,30 @@
+<h1>Please Add Issues You Would Like Addressed Here!</h1>
+
+
+<div>
+    {{cityName}}
+    <form action="/cities/{{cityName}}/issues/" method="post">
+        <div>
+            <label for="name">name:</label>
+            <input type="text" name="name" placeholder="Issue Name"/>
+        </div>
+        <div>
+            <label for="city">City</label>
+            <input type="text" name="city" placeholder="city name"/>
+        </div>
+        <div>
+            <label for="description">Issue description:</label>
+            <input type="text" name="description" placeholder="Issue Description"/>
+        </div>
+        <div>
+            <label for="volunteers">Volunteers Needed Amount:</label>
+            <input type="text" name="numberOfVolunteersNeeded" placeholder="volunteers needed"/>
+        </div>
+        <div>
+            <label for="volunteers">Number of Volunteers On Current Issue:</label>
+            <input type="text" name="volunteers" placeholder="volunteers"/>
+        </div>
+        
+        <button type="submit">Submit Issue!</button>
+    </form>
+</div>
