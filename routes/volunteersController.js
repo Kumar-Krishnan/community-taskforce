@@ -16,6 +16,10 @@ router.get('/', (req,res)=>{
    
 })
 
+router.get('/new',(req,res)=>{
+    res.render('volunteers/new')
+})
+
 router.get('/:volunteer', (req,res)=>{
     cityName = req.params.cityName
     issueIndex = req.params.issueIndex
@@ -27,5 +31,7 @@ router.get('/:volunteer', (req,res)=>{
         res.render('volunteers/show', {volunteer, cityName, issueIndex, volunteerIndex})
     })
 })
+
+
 
 module.exports=router
