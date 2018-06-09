@@ -11,8 +11,10 @@ const mongoose = require('mongoose')
 const app = express();
 const citiesController = require('./routes/citiesController')
 const issuesController = require('./routes/issuesController')
-
+const volunteersController = require('./routes/volunteersController')
 // view engine setup
+
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(methodOverride('_method'))
@@ -22,9 +24,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.get('/', (req,res)=>{
-//   res.send("Jesus loves you.")
-// });
 
 app.get('/', (req,res)=>{
   res.render('index', {title: "jesus"})
@@ -32,7 +31,7 @@ app.get('/', (req,res)=>{
 
 app.use('/cities', citiesController)
 app.use('/cities/:cityName/issues', issuesController)
-
+app.use('/cities/:cityName/issues/:issueIndex/volunteers', volunteersController)
 
 
 
