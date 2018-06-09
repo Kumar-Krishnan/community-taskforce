@@ -96,13 +96,6 @@ router.delete('/:volunteer', (req,res)=>{
 })
 
 
-// City.findOne({name: cityName})
-// .then((city)=>{
-//     city.issues[issueIndex].volunteers[volunteerIndex] = req.body
-//     return city.save()
-// })
-// .then(()=>{
-//     res.redirect(`/cities/${cityName}/issues/${issueIndex}/volunteers/${volunteerIndex}`)
-// })
+
 
 module.exports=router
