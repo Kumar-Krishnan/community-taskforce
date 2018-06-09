@@ -19,12 +19,12 @@ router.get('/', (req,res)=>{
 router.get('/:volunteer', (req,res)=>{
     cityName = req.params.cityName
     issueIndex = req.params.issueIndex
-    volunteerIndex = req.params.volunteerIndex
+    volunteerIndex = req.params.volunteer
 
     City.findOne({name: cityName})
     .then((city)=>{
-        volunteers = city.issues[issueIndex].volunteers[volunteerIndex]
-        res.render('volunteers/show')
+        volunteer = city.issues[issueIndex].volunteers[volunteerIndex]
+        res.render('volunteers/show', {volunteer, cityName, issueIndex, volunteerIndex})
     })
 })
 
