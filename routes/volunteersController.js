@@ -89,7 +89,7 @@ router.delete('/:volunteer', (req,res)=>{
         city.issues[issueIndex].volunteers.splice(volunteerIndex,1)
         return city.save()
     })
-    .then((saved)=>{
+    .then(()=>{
         res.redirect(`/cities/${cityName}/issues/${issueIndex}/volunteers/`)
     })
 
