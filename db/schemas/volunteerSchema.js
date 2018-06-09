@@ -5,7 +5,7 @@ const volunteerSchema = new Schema({
     name: String,
     // image: String, stretch goal
     description: String,
-    contactNumber: Number,
+    contactNumber: String,
     contactEmail: String
     // agents: [agentSchema]
 })

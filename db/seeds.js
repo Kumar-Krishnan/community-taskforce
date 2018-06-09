@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const City = require('../models/City')
 const Issue = require('../models/Issue')
+const Volunteer = require('../models/Volunteer')
 
 //Connect to Database
 mongoose.connect('mongodb://localhost/community-taskforce')
@@ -14,13 +15,28 @@ mongoose.connect('mongodb://localhost/community-taskforce')
 //Remove old City Data
 City.remove()
       .then(()=>{
+        
+        const volunteer1 = new Volunteer({
+            name: "Jason",
+            description: "Team lead",
+            contactNumber: "555-226-8432",
+            contactEmail: "JTL@gmail.com"
+        })
+        
+        const volunteer2 = new Volunteer({
+            name: "Salome",
+            description: "Philosopher",
+            contactNumber: "333-2456-9909",
+            contactEmail: "NeitzcheWasWeakSauce@gmail.com"
+        })
 
         const issue1 = new Issue({
             name: "Public Wifi",
             city: "San Paulo",
             description: "Buddha",
             numberOfVolunteersNeeded: 4,
-            Volunteers: 6    
+            volunteersAmount: 6,
+            volunteers:[volunteer1,volunteer2] 
         })
 
         const issue2 = new Issue({
@@ -28,7 +44,8 @@ City.remove()
             city: "Atlanta",
             description: "baby don't hurt me",
             numberOfVolunteersNeeded: 5,
-            volunteers: 6    
+            volunteersAmount: 6,
+            volunteers: [volunteer1,volunteer2]
         })
 
         const city1 = new City({
