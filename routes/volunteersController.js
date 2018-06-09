@@ -49,6 +49,27 @@ router.post('/', (req,res)=>{
     })
 })
 
+router.get('/:volunteer/edit', (req,res)=>{
+    cityName = req.params.cityName
+    issueIndex = req.params.issueIndex
+    volunteerIndex = req.params.volunteer
 
+    City.findOne({name: cityName})
+    .then((city)=>{
+        volunteer = city.issues[issueIndex].volunteers[volunteerIndex]
+        res.render('volunteers/edit',{cityName,issueIndex,volunteerIndex, volunteer})
+    })
+})
+
+
+
+// City.findOne({name: cityName})
+// .then((city)=>{
+//     city.issues[issueIndex].volunteers[volunteerIndex] = req.body
+//     return city.save()
+// })
+// .then(()=>{
+//     res.redirect(`/cities/${cityName}/issues/${issueIndex}/volunteers/${volunteerIndex}`)
+// })
 
 module.exports=router

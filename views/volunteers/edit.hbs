@@ -1,28 +1,24 @@
-<h1>Please Edit Issues Submitted Here!</h1>
+<h1>Please Edit Volunteer Info Here!</h1>
 
 
 <div>
     {{cityName}}
-    <form action="/cities/{{cityName}}/issues/{{issueIndex}}?_method=PUT" method="post">
+    <form action="/cities/{{cityName}}/issues/{{issueIndex}}/volunteers/{{volunteerIndex}}?_method=PUT" method="post">
         <div>
-            <label for="name">name:</label>
-            <input type="text" name="name" value="{{issue.name}}"/>
+            <label for="name">Volunteer name:</label>
+            <input type="text" name="name" value="{{volunteer.name}}"/>
         </div>
         <div>
-            <label for="city">City</label>
-            <input type="text" name="city" value="{{issue.city}}"/>
+            <label for="description">Volunteer description:</label>
+            <input type="text" name="description" value="{{volunteer.description}}"/>
         </div>
         <div>
-            <label for="description">Issue description:</label>
-            <input type="text" name="description" value="{{issue.description}}"/>
+            <label for="volunteers">Volunteer Contact Phone:</label>
+            <input type="text" name="contactNumber" value="{{volunteer.contactNumber}}"/>
         </div>
         <div>
-            <label for="volunteers">Volunteers Needed Amount:</label>
-            <input type="text" name="numberOfVolunteersNeeded" value="{{issue.numberOfVolunteersNeeded}}"/>
-        </div>
-        <div>
-            <label for="volunteers">Number of Volunteers On Current Issue:</label>
-            <input type="text" name="volunteers" value="{{issue.volunteers}}"/>
+            <label for="volunteers">Volunteer Contact Email:</label>
+            <input type="text" name="contactEmail" value="{{value.contactEmail}}"/>
         </div>
         
         <button type="submit">Edit Issue!</button>
