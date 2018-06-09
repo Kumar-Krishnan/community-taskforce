@@ -17,7 +17,9 @@ router.get('/', (req,res)=>{
 })
 
 router.get('/new',(req,res)=>{
-    res.render('volunteers/new')
+    cityName = req.params.cityName
+    issueIndex = req.params.issueIndex
+    res.render('volunteers/new', {cityName,issueIndex})
 })
 
 router.get('/:volunteer', (req,res)=>{

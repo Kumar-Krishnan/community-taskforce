@@ -3,28 +3,24 @@
 
 <div>
     {{cityName}}
-    <form action="/cities/{{cityName}}/issues/" method="post">
+    <form action="/cities/{{cityName}}/issues/{{issueIndex}}/volunteers" method="post">
         <div>
-            <label for="name">name:</label>
-            <input type="text" name="name" placeholder="Issue Name"/>
+            <label for="name">Volunteer name:</label>
+            <input type="text" name="name" placeholder="Volunteer Name"/>
         </div>
         <div>
-            <label for="city">City</label>
-            <input type="text" name="city" placeholder="city name"/>
+            <label for="description">Volunteer description:</label>
+            <input type="text" name="description" placeholder="Volunteer Description"/>
         </div>
         <div>
-            <label for="description">Issue description:</label>
-            <input type="text" name="description" placeholder="Issue Description"/>
+            <label for="volunteers">Volunteer Contact Phone:</label>
+            <input type="text" name="contactNumber" placeholder="###-###-####"/>
         </div>
         <div>
-            <label for="volunteers">Volunteers Needed Amount:</label>
-            <input type="text" name="numberOfVolunteersNeeded" placeholder="volunteers needed"/>
-        </div>
-        <div>
-            <label for="volunteers">Number of Volunteers On Current Issue:</label>
-            <input type="text" name="volunteers" placeholder="volunteers"/>
+            <label for="volunteers">Volunteer Contact Email:</label>
+            <input type="text" name="contactEmail" placeholder="example@example.com"/>
         </div>
         
-        <button type="submit">Submit Issue!</button>
+        <button type="submit">Submit Volunteer!</button>
     </form>
 </div>
