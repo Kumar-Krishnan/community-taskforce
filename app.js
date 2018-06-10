@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', (req,res)=>{
-  res.render('index', {title: "jesus"})
+  res.render('index')
 });
 
 app.use('/cities', citiesController)
