@@ -18,23 +18,25 @@ router.get('/', (req,res)=>{
    
 })
 
-// router.get('/new',(req,res)=>{
-//     cityName = req.params.cityName
-//     issueIndex = req.params.issueIndex
-//     res.render('volunteers/new', {cityName,issueIndex})
-// })
+router.get('/new',(req,res)=>{
+    cityName = req.params.cityName
+    issueIndex = req.params.issueIndex
+    taskforceIndex = req.params.taskforceIndex
+    res.render('volunteers/new', {cityName,issueIndex,taskforceIndex})
+})
 
-// router.get('/:volunteer', (req,res)=>{
-//     cityName = req.params.cityName
-//     issueIndex = req.params.issueIndex
-//     volunteerIndex = req.params.volunteer
+router.get('/:volunteer', (req,res)=>{
+    cityName = req.params.cityName
+    issueIndex = req.params.issueIndex
+    taskforceIndex = req.params.taskforceIndex
+    volunteerIndex = req.params.volunteer
 
-//     City.findOne({name: cityName})
-//     .then((city)=>{
-//         volunteer = city.issues[issueIndex].volunteers[volunteerIndex]
-//         res.render('volunteers/show', {volunteer, cityName, issueIndex, volunteerIndex})
-//     })
-// })
+    City.findOne({name: cityName})
+    .then((city)=>{
+        volunteer = city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating[volunteerIndex]
+        res.render('volunteers/show', {volunteer, cityName, issueIndex, volunteerIndex,taskforceIndex})
+    })
+})
 
 // router.post('/', (req,res)=>{
 //     cityName = req.params.cityName
