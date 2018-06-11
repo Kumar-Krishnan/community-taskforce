@@ -12,6 +12,7 @@ const app = express();
 const citiesController = require('./routes/citiesController')
 const issuesController = require('./routes/issuesController')
 const volunteersController = require('./routes/volunteersController')
+const taskforcesController = require('./routes/taskforcesController')
 // view engine setup
 
 
@@ -31,6 +32,7 @@ app.get('/', (req,res)=>{
 
 app.use('/cities', citiesController)
 app.use('/cities/:cityName/issues', issuesController)
+app.use('/cities/:cityname/issues/:issueIndex/taskforces', taskforcesController)
 app.use('/cities/:cityName/issues/:issueIndex/volunteers', volunteersController)
 
 

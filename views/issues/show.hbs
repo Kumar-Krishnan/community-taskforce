@@ -1,9 +1,29 @@
-<div><label for="name">Issue:</label> {{issue.name}} <br>
-<label for="description">Description:</label>{{issue.description}}
+<nav >
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <a href="/cities/{{cityName}}"><button class="topButton">Go Back To {{cityName}}</button></a>
+                <h5>All labor that uplifts humanity has dignity 
+                and importance and should be undertaken with 
+                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</nav>
+<div><h3>{{issue.name}}</h3> <br>
+<p>{{issue.description}}</p>
 
+    <a href="/cities/{{cityName}}/issues/{{issueIndex}}/edit"><button> Edit issue</button></a>
 <form action="/cities/{{cityName}}/issues/{{issueIndex}}?_method=DELETE" method="post">
     <button type="submit">
         DELETE
     </button>
 </form>
+</div>
+
+<div class="thumbnail">
+    <img class="bannerImg" src="https://i.imgur.com/V8bGe6Ql.jpg">
 </div>
