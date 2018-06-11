@@ -1,6 +1,7 @@
 body {
   padding-top:10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 a {
@@ -22,6 +23,23 @@ nav{
   padding: 5px;
 }
 
-#mlkQuote{
+.mlkQuote{
   font-size: 15px;
+}
+
+.cityBox{
+  height:200px;
+  text-align: center;
+  align-content: center;
+}
+.cityImg{
+  width:200px;
+  height: 150px;
+  display: inline-block;
+  background-color: rgb(215, 255, 215)
+}
+
+.cityInput{
+  width:600px;
+  height:150px;
 }

@@ -1,23 +1,30 @@
+<nav >
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <h4>All labor that uplifts humanity has dignity 
+            and importance and should be undertaken with 
+            painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span></h4>
+            </div>
+        </div>
+    </div>
+</nav>
 <h1> Welcome! Community Member</h1>
 <h4> Find your city, find out what issues are present, and see how you can help!</h4>
-<h6>If you do not find your city here, please click on the new city link to the right and add your city to the Community Taskforce service. There are others like you who are also looking to give back, take the first step and create a path for them.</h6>
+<h6>If you do not find your city here, please click on the new city button to the right and add your city to the Community Taskforce service. There are others like you who are also looking to give back, take the first step and create a path for them.</h6>
 
-
-
-
-
+<a href="/cities/new"><button>New City</button></a>
 <div>
-    <ul>
         {{#each cities}}
-        <li>
+        <div class="cityBox">
             <a href="/cities/{{name}}">
-            <p>
-                Name: {{name}}
-                <br>
-                Zip: {{zipcode}}
-            </p>
+                <h3>{{name}}</h3>
             </a>
-        </li>
+            <div class="thumbnail cityImg">
+                <img src="{{image}}" class="cityImgPic">
+            </div>
+        </div>
         {{/each}}
-    </ul>
 </div>
