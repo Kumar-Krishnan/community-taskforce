@@ -13,7 +13,7 @@ router.get('/', (req,res)=>{
     City.findOne({name: cityName})
     .then((city)=>{
         volunteers = city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating
-        res.render('volunteers/index', {volunteers,cityName,issueIndex})
+        res.render('volunteers/index', {volunteers,cityName,issueIndex,taskforceIndex})
     })
    
 })
@@ -85,21 +85,22 @@ router.put('/:volunteer', (req,res)=>{
     })
 })
 
-// router.delete('/:volunteer', (req,res)=>{
-//     const cityName = req.params.cityName
-//     const issueIndex = req.params.issueIndex
-//     const volunteerIndex = req.params.volunteer
+router.delete('/:volunteer', (req,res)=>{
+    const cityName = req.params.cityName
+    const issueIndex = req.params.issueIndex
+    const taskforceIndex = req.params.taskforceIndex
+    const volunteerIndex = req.params.volunteer
 
-//     City.findOne({name:cityName})
-//     .then((city)=>{
-//         city.issues[issueIndex].volunteers.splice(volunteerIndex,1)
-//         return city.save()
-//     })
-//     .then(()=>{
-//         res.redirect(`/cities/${cityName}/issues/${issueIndex}/volunteers/`)
-//     })
+    City.findOne({name:cityName})
+    .then((city)=>{
+        city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating.splice(volunteerIndex,1)
+        return city.save()
+    })
+    .then(()=>{
+        res.redirect(`/cities/${cityName}/issues/${issueIndex}/taskforces/${taskforceIndex}/volunteers/`)
+    })
 
-// })
+})
 
 
 
