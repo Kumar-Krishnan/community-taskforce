@@ -53,17 +53,18 @@ router.post('/', (req,res)=>{
     })
 })
 
-// router.get('/:volunteer/edit', (req,res)=>{
-//     cityName = req.params.cityName
-//     issueIndex = req.params.issueIndex
-//     volunteerIndex = req.params.volunteer
+router.get('/:volunteer/edit', (req,res)=>{
+    cityName = req.params.cityName
+    issueIndex = req.params.issueIndex
+    taskforceIndex = req.params.taskforceIndex
+    volunteerIndex = req.params.volunteer
 
-//     City.findOne({name: cityName})
-//     .then((city)=>{
-//         volunteer = city.issues[issueIndex].volunteers[volunteerIndex]
-//         res.render('volunteers/edit',{cityName,issueIndex,volunteerIndex, volunteer})
-//     })
-// })
+    City.findOne({name: cityName})
+    .then((city)=>{
+        volunteer = city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating[volunteerIndex]
+        res.render('volunteers/edit',{cityName,issueIndex,volunteerIndex, volunteer,taskforceIndex})
+    })
+})
 
 // router.put('/:volunteer', (req,res)=>{
 //     const cityName = req.params.cityName
