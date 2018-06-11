@@ -38,20 +38,20 @@ router.get('/:volunteer', (req,res)=>{
     })
 })
 
-// router.post('/', (req,res)=>{
-//     cityName = req.params.cityName
-//     issueIndex = req.params.issueIndex
-
-//     City.findOne({name: cityName})
-//     .then((city)=>{
-//         newVolunteer = req.body
-//         city.issues[issueIndex].volunteers.push(newVolunteer)
-//         return city.save()
-//     })
-//     .then(()=>{
-//         res.redirect(`/cities/${cityName}/issues/${issueIndex}/volunteers`)
-//     })
-// })
+router.post('/', (req,res)=>{
+    cityName = req.params.cityName
+    issueIndex = req.params.issueIndex
+    taskforceIndex = req.params.taskforceIndex
+    City.findOne({name: cityName})
+    .then((city)=>{
+        newVolunteer = req.body
+        city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating.push(newVolunteer)
+        return city.save()
+    })
+    .then(()=>{
+        res.redirect(`/cities/${cityName}/issues/${issueIndex}/taskforces/${taskforceIndex}/volunteers`)
+    })
+})
 
 // router.get('/:volunteer/edit', (req,res)=>{
 //     cityName = req.params.cityName
