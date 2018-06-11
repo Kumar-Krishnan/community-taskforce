@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 const City = require('../models/City')
 const Issue = require('../models/Issue')
-const Volunteer = require('../models/Volunteer')
+// const Volunteer = require('../models/Volunteer')
+const Taskforce = require('../models/Taskforce')
 
 //Connect to Database
 mongoose.connect('mongodb://localhost/community-taskforce')
@@ -15,20 +16,36 @@ mongoose.connect('mongodb://localhost/community-taskforce')
 //Remove old City Data
 City.remove()
       .then(()=>{
-        
-        const volunteer1 = new Volunteer({
-            name: "Jason",
-            description: "Team lead",
-            contactNumber: "555-226-8432",
-            contactEmail: "JTL@gmail.com"
+
+        const taskForce1 = new Taskforce({
+            name: "Shasta wifi cultivators",
+            missionStatement: "To organize techies in shasta neighrbood and interface them with city-wide efforts",
+            leadOrganizer: "Jame Gandolfini",
+            contactEmail: "JG@TVM.com",
+            skillsPreferred: ["public speaking", "accounting"]
+        })
+
+        const taskForce2 = new Taskforce({
+            name: "Archelogical survey team",
+            missionStatement: "Our goal is to survey the lands around TVM for any historical structures and alert both government and NGO entities to protect said areas",
+            leadOrganizer: "Chanakya",
+            contactEmail:"chanman@gmail.com",
+            skillsPreferred: ["geological survey", "able bodied", "wilderness trekking"]
         })
         
-        const volunteer2 = new Volunteer({
-            name: "Salome",
-            description: "Philosopher",
-            contactNumber: "333-2456-9909",
-            contactEmail: "NeitzcheWasWeakSauce@gmail.com"
-        })
+        // const volunteer1 = new Volunteer({
+        //     name: "Jason",
+        //     description: "Team lead",
+        //     contactNumber: "555-226-8432",
+        //     contactEmail: "JTL@gmail.com"
+        // })
+        
+        // const volunteer2 = new Volunteer({
+        //     name: "Salome",
+        //     description: "Philosopher",
+        //     contactNumber: "333-2456-9909",
+        //     contactEmail: "NeitzcheWasWeakSauce@gmail.com"
+        // })
 
         const issue1 = new Issue({
             name: "Public Wifi",

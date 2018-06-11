@@ -1,6 +1,6 @@
 const Schema = require('mongoose').Schema
-const volunteerSchema = require('./volunteerSchema')
-
+// const volunteerSchema = require('./volunteerSchema')
+const taskforceSchema = require('./taskforceSchema')
 const issueSchema = new Schema({
     name: {
         type: String,
@@ -16,7 +16,7 @@ const issueSchema = new Schema({
         type: Number,
         default: 0
     },
-    volunteers: [volunteerSchema]
+    taskforces: [taskforceSchema]
 
 })
 
