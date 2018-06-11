@@ -81,21 +81,21 @@ router.put('/:taskforce', (req,res)=>{
     })
 })
 
-// router.delete('/:volunteer', (req,res)=>{
-//     const cityName = req.params.cityName
-//     const issueIndex = req.params.issueIndex
-//     const volunteerIndex = req.params.volunteer
+router.delete('/:taskforce', (req,res)=>{
+    const cityName = req.params.cityName
+    const issueIndex = req.params.issueIndex
+    const taskforceIndex = req.params.taskforce
 
-//     City.findOne({name:cityName})
-//     .then((city)=>{
-//         city.issues[issueIndex].volunteers.splice(volunteerIndex,1)
-//         return city.save()
-//     })
-//     .then(()=>{
-//         res.redirect(`/cities/${cityName}/issues/${issueIndex}/volunteers/`)
-//     })
+    City.findOne({name:cityName})
+    .then((city)=>{
+        city.issues[issueIndex].taskforces.splice(taskforceIndex,1)
+        return city.save()
+    })
+    .then(()=>{
+        res.redirect(`/cities/${cityName}/issues/${issueIndex}/taskforces/`)
+    })
 
-// })
+})
 
 
 
