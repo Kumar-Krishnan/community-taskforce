@@ -39,6 +39,10 @@ nav{
   background-color: rgb(215, 255, 215)
 }
 
+.cityImgPic{
+  max-height:140px;
+}
+
 .cityNewContainer{
   background-color: rgba(50, 240, 215, 0.342); 
   border-radius: 10px;
