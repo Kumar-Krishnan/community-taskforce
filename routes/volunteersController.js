@@ -66,23 +66,24 @@ router.get('/:volunteer/edit', (req,res)=>{
     })
 })
 
-// router.put('/:volunteer', (req,res)=>{
-//     const cityName = req.params.cityName
-//     const issueIndex = req.params.issueIndex
-//     const volunteerIndex = req.params.volunteer
+router.put('/:volunteer', (req,res)=>{
+    const cityName = req.params.cityName
+    const issueIndex = req.params.issueIndex
+    const taskforceIndex = req.params.issueIndex
+    const volunteerIndex = req.params.volunteer
 
-//     City.findOne({name: cityName})
-//     .then((city)=>{
-//         city.issues[issueIndex].volunteers[volunteerIndex] = req.body
-//        return city.save()
-//     })
-//     .then(()=>{
-//         res.redirect(`/cities/${cityName}/issues/${issueIndex}/volunteers/${volunteerIndex}`)
-//     })
-//     .catch((err)=>{
-//         console.log(err, "Error")
-//     })
-// })
+    City.findOne({name: cityName})
+    .then((city)=>{
+        city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating[volunteerIndex] = req.body
+       return city.save()
+    })
+    .then(()=>{
+        res.redirect(`/cities/${cityName}/issues/${issueIndex}/taskforces/${taskforceIndex}/volunteers/${volunteerIndex}`)
+    })
+    .catch((err)=>{
+        console.log(err, "Error")
+    })
+})
 
 // router.delete('/:volunteer', (req,res)=>{
 //     const cityName = req.params.cityName

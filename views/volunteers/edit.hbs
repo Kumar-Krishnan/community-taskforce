@@ -3,7 +3,7 @@
 
 <div>
     {{cityName}}
-    <form action="/cities/{{cityName}}/issues/{{issueIndex}}/volunteers/{{volunteerIndex}}?_method=PUT" method="post">
+    <form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/volunteers/{{volunteerIndex}}?_method=PUT" method="post">
         <div>
             <label for="name">Volunteer name:</label>
             <input type="text" name="name" value="{{volunteer.name}}"/>
@@ -21,6 +21,6 @@
             <input type="text" name="contactEmail" value="{{volunteer.contactEmail}}"/>
         </div>
         
-        <button type="submit">Edit Issue!</button>
+        <button type="submit">Edit Volunteer Info!</button>
     </form>
 </div>
