@@ -14,7 +14,7 @@
         </div>
     </div>
 </nav>
-<h3> {{city.name}}</h3>
+<h3> {{city.name}} <a href="/cities/{{city.name}}/edit"><button class="cityEditRouteButton">Edit this city's details</button></a></h3>
 
 <div>
     <p>
@@ -34,7 +34,6 @@
     
     </div>
     {{!-- </a> --}}
-
     <form method="post" action="/cities/{{city.name}}?_method=DELETE">
         <button type="submit">Remove this city from Community TaskForce</button>
     </form>

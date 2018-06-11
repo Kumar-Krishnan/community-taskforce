@@ -1,3 +1,18 @@
+<nav >
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <a href="/cities/{{city.name}}"><button class="topButton">Go Back To {{city.name}}</button></a>
+                <h5>All labor that uplifts humanity has dignity 
+                and importance and should be undertaken with 
+                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</nav>
 <h1>Edit {{city.name}}'s profile here!</h1>
 {{city.description}}
 <div>
@@ -8,7 +23,7 @@
         </div>
         <div>
             <label for="description">City description:</label>
-            <input type="text" name="description" value="{{city.description}}">
+            <input type="text" class="cityDescriptionInput" name="description" value="{{city.description}}">
         </div>
         <div>
             <label for="zipcode">City zipcode:</label>
@@ -16,9 +31,10 @@
         </div>
         <div>
             <label for="image">City Image:</label>
-            <input type="text" name="image" value="{{city.image}}">
+            <input type="text" class="cityImageInput" name="image" value="{{city.image}}">
         </div>
         
+        <a href="/cities/{{city.name}}"><button>Cancel</button></a>
         <button type="submit">Edit Your City!</button>
     </form>
 </div>
