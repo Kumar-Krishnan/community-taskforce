@@ -22,7 +22,7 @@ City.remove()
             missionStatement: "To organize techies in shasta neighrbood and interface them with city-wide efforts",
             leadOrganizer: "Jame Gandolfini",
             contactEmail: "JG@TVM.com",
-            // skillsPreferred: ["public speaking", "accounting"]
+            skillsPreferred: ["public speaking", "accounting"]
         })
 
         const taskforce2 = new Taskforce({
@@ -30,7 +30,7 @@ City.remove()
             missionStatement: "Our goal is to survey the lands around eastern TVM for any historical structures and alert both government and NGO entities to protect said areas",
             leadOrganizer: "Chanakya",
             contactEmail:"chanman@gmail.com",
-            // skillsPreferred: ["geological survey", "able bodied", "wilderness trekking"]
+            skillsPreferred: ["geological survey", "able bodied", "wilderness trekking"]
         })
         
         // const volunteer1 = new Volunteer({

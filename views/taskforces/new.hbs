@@ -1,26 +1,26 @@
-<h1>Please Add Your Details Here If You Would Like to Volunteer to Address This Issue!</h1>
+<h1>Create a group to Address</h1>
 
 
 <div>
     {{cityName}}
     <form action="/cities/{{cityName}}/issues/{{issueIndex}}/volunteers" method="post">
         <div>
-            <label for="name">Volunteer name:</label>
-            <input type="text" name="name" placeholder="Volunteer Name"/>
+            <label for="name">Taskforce Name:</label>
+            <input type="text" name="name" placeholder="Name"/>
         </div>
         <div>
-            <label for="description">Volunteer description:</label>
-            <input type="text" name="description" placeholder="Volunteer Description"/>
+            <label for="missionStatement">Mission Statement:</label>
+            <input type="text" name="missionStatement" placeholder="Mission Statement"/>
         </div>
         <div>
-            <label for="volunteers">Volunteer Contact Phone:</label>
-            <input type="text" name="contactNumber" placeholder="###-###-####"/>
+            <label for="leadOrganizer">Lead Organizer:</label>
+            <input type="text" name="leadOrganizer" placeholder="Lead Organizer "/>
         </div>
         <div>
-            <label for="volunteers">Volunteer Contact Email:</label>
+            <label for="contactEmail">Organizer Contact Email:</label>
             <input type="text" name="contactEmail" placeholder="example@example.com"/>
         </div>
         
-        <button type="submit">Submit Volunteer!</button>
+        <button type="submit">Create Taskforce!</button>
     </form>
 </div>

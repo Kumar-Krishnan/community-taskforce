@@ -17,11 +17,12 @@ router.get('/', (req,res)=>{
    
 })
 
-// router.get('/new',(req,res)=>{
-//     cityName = req.params.cityName
-//     issueIndex = req.params.issueIndex
-//     res.render('taskforces/new', {cityName,issueIndex})
-// })
+router.get('/new',(req,res)=>{
+    cityName = req.params.cityName
+    issuename = City.findOne({name: cityName})
+    issueIndex = req.params.issueIndex
+    res.render('taskforces/new', {cityName,issueIndex})
+})
 
 // router.get('/:taskforce', (req,res)=>{
 //     cityName = req.params.cityName
