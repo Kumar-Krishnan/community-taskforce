@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding-top:10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -7,6 +7,21 @@ a {
   color: #00B7FF;
 }
 
-.indexContainer{
-  background-image: url()
+nav{
+  padding: 20px;
+  background-color: rgb(131, 241, 131);
+  border-radius: 15px;
+  margin:0;
+}
+
+.topNav{
+  display:inline;
+}
+
+.topButton{
+  padding: 5px;
+}
+
+#mlkQuote{
+  font-size: 15px;
 }
