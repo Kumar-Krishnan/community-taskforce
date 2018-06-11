@@ -6,16 +6,12 @@ const issueSchema = new Schema({
         type: String,
         required: true
     },
-    city: {
-        type: String,
-        required: true
-    },
     description: String,
-    numberOfVolunteersNeeded: Number,
-    volunteersAmount: {
-        type: Number,
-        default: 0
-    },
+    // numberOfVolunteersNeeded: Number,
+    // volunteersAmount: {
+    //     type: Number,
+    //     default: 0
+    // },
     taskforces: [taskforceSchema]
 
 })

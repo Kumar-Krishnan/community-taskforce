@@ -32,7 +32,7 @@ app.get('/', (req,res)=>{
 
 app.use('/cities', citiesController)
 app.use('/cities/:cityName/issues', issuesController)
-app.use('/cities/:cityname/issues/:issueIndex/taskforces', taskforcesController)
+app.use('/cities/:cityName/issues/:issueIndex/taskforces', taskforcesController)
 app.use('/cities/:cityName/issues/:issueIndex/volunteers', volunteersController)
 
 

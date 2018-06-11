@@ -17,20 +17,20 @@ mongoose.connect('mongodb://localhost/community-taskforce')
 City.remove()
       .then(()=>{
 
-        const taskForce1 = new Taskforce({
+        const taskforce1 = new Taskforce({
             name: "Shasta wifi cultivators",
             missionStatement: "To organize techies in shasta neighrbood and interface them with city-wide efforts",
             leadOrganizer: "Jame Gandolfini",
             contactEmail: "JG@TVM.com",
-            skillsPreferred: ["public speaking", "accounting"]
+            // skillsPreferred: ["public speaking", "accounting"]
         })
 
-        const taskForce2 = new Taskforce({
+        const taskforce2 = new Taskforce({
             name: "Archelogical survey team",
-            missionStatement: "Our goal is to survey the lands around TVM for any historical structures and alert both government and NGO entities to protect said areas",
+            missionStatement: "Our goal is to survey the lands around eastern TVM for any historical structures and alert both government and NGO entities to protect said areas",
             leadOrganizer: "Chanakya",
             contactEmail:"chanman@gmail.com",
-            skillsPreferred: ["geological survey", "able bodied", "wilderness trekking"]
+            // skillsPreferred: ["geological survey", "able bodied", "wilderness trekking"]
         })
         
         // const volunteer1 = new Volunteer({
@@ -49,20 +49,14 @@ City.remove()
 
         const issue1 = new Issue({
             name: "Public Wifi",
-            city: "San Paulo",
             description: "Buddha",
-            numberOfVolunteersNeeded: 4,
-            volunteersAmount: 6,
-            volunteers:[volunteer1,volunteer2] 
+            taskforces: [taskforce1,taskforce2]
         })
 
         const issue2 = new Issue({
             name: "Hydroponics",
-            city: "Atlanta",
             description: "baby don't hurt me",
-            numberOfVolunteersNeeded: 5,
-            volunteersAmount: 6,
-            volunteers: [volunteer1,volunteer2]
+            taskforces: [taskforce1,taskforce2]
         })
 
         const city1 = new City({

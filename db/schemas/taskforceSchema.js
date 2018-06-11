@@ -5,7 +5,7 @@ const taskforceSchema = new Schema({
     missionStatement: String,
     leadOrganizer: String,
     contactEmail: String,
-    skillsPreferred: [String]
+    // skillsPreferred: [String]
     // agents: [agentSchema]
 })
 

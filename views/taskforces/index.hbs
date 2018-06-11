@@ -1,0 +1,17 @@
+
+
+<div>
+    <ul>
+        {{#each taskforces}}
+        <li>
+            <a href="/cities/{{../cityName}}/issues/{{../issueIndex}}/volunteers/{{@index}}">
+            {{name}}<br>
+            {{missionStatement}}
+            {{leadOrganizer}}
+            {{contactEmail}}
+            {{skillsPreferred}}
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</div>

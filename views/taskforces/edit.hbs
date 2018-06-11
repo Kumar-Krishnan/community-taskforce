@@ -1,0 +1,26 @@
+<h1>Please Edit Volunteer Info Here!</h1>
+
+
+<div>
+    {{cityName}}
+    <form action="/cities/{{cityName}}/issues/{{issueIndex}}/volunteers/{{volunteerIndex}}?_method=PUT" method="post">
+        <div>
+            <label for="name">Volunteer name:</label>
+            <input type="text" name="name" value="{{volunteer.name}}"/>
+        </div>
+        <div>
+            <label for="description">Volunteer description:</label>
+            <input type="text" name="description" value="{{volunteer.description}}"/>
+        </div>
+        <div>
+            <label for="volunteers">Volunteer Contact Phone:</label>
+            <input type="text" name="contactNumber" value="{{volunteer.contactNumber}}"/>
+        </div>
+        <div>
+            <label for="volunteers">Volunteer Contact Email:</label>
+            <input type="text" name="contactEmail" value="{{volunteer.contactEmail}}"/>
+        </div>
+        
+        <button type="submit">Edit Issue!</button>
+    </form>
+</div>
