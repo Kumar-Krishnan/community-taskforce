@@ -1,24 +1,41 @@
-<h1> {{city.name}}</h1>
+
+<nav >
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <a href="/cities"><button class="topButton">Go Back To Cities</button></a>
+                <h5>All labor that uplifts humanity has dignity 
+                and importance and should be undertaken with 
+                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</nav>
+<h3> {{city.name}}</h3>
 
 <div>
     <p>
         {{city.description}}
     </p>
-    <a href="/cities/{{city.name}}/issues">
+    <h4>Users submitted community issues so far are listed below. Click one to find out more details. To submit issues, click <a href="/cities/{{city.name}}/issues/new"><button>Submit Issues</button></a></h4> 
+    {{!-- <a href="/cities/{{city.name}}/issues"> --}}
     <div>
     
         <ul>
             {{#each city.issues}}
             <li>
-                {{name}}
+                <a href="/cities/{{../city.name}}/issues/{{@index}}">{{name}}</a>
             </li>
                 {{/each}}
         </ul>
     
     </div>
-    </a>
+    {{!-- </a> --}}
 
     <form method="post" action="/cities/{{city.name}}?_method=DELETE">
-        <button type="submit">DELETE</button>
+        <button type="submit">Remove this city from Community TaskForce</button>
     </form>
 </div>

@@ -39,7 +39,15 @@ nav{
   background-color: rgb(215, 255, 215)
 }
 
-.cityInput{
+.cityNewContainer{
+  background-color: rgba(50, 240, 215, 0.342); 
+  border-radius: 10px;
+}
+.cityDescriptionInput{
   width:600px;
-  height:150px;
+  height:50px;
+}
+
+.cityImageInput{
+  width:400px;
 }
