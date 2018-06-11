@@ -16,12 +16,25 @@
 <div><h3>{{issue.name}}</h3> <br>
 <p>{{issue.description}}</p>
 
+
     <a href="/cities/{{cityName}}/issues/{{issueIndex}}/edit"><button> Edit issue</button></a>
 <form action="/cities/{{cityName}}/issues/{{issueIndex}}?_method=DELETE" method="post">
     <button type="submit">
         DELETE
     </button>
 </form>
+</div>
+
+<div>
+    {{#each issue.taskforces}}
+        <a href="/cities/{{../cityName}}/issues/{{../issueIndex}}/taskforces/{{@index}}">
+            <div>
+            {{name}}
+            {{leadOrganizer}}
+            {{contactEmail}}
+            </div>
+        </a>
+    {{/each}}
 </div>
 
 <div class="thumbnail">
