@@ -24,17 +24,17 @@ router.get('/new',(req,res)=>{
     res.render('taskforces/new', {cityName,issueIndex})
 })
 
-// router.get('/:taskforce', (req,res)=>{
-//     cityName = req.params.cityName
-//     issueIndex = req.params.issueIndex
-//     taskforceIndex = req.params.taskforce
+router.get('/:taskforce', (req,res)=>{
+    cityName = req.params.cityName
+    issueIndex = req.params.issueIndex
+    taskforceIndex = req.params.taskforce
 
-//     City.findOne({name: cityName})
-//     .then((city)=>{
-//         taskforce = city.issues[issueIndex].taskforces[taskforceIndex]
-//         res.render('taskforces/show', {taskforce, cityName, issueIndex, taskforceIndex})
-//     })
-// })
+    City.findOne({name: cityName})
+    .then((city)=>{
+        taskforce = city.issues[issueIndex].taskforces[taskforceIndex]
+        res.render('taskforces/show', {taskforce, cityName, issueIndex, taskforceIndex})
+    })
+})
 
 // router.post('/', (req,res)=>{
 //     cityName = req.params.cityName

@@ -1,5 +1,17 @@
-<div><label for="name">Volunteer Name:</label> {{volunteer.name}} <br>
-<label for="description">Description:</label>{{volunteer.description}}
+<div>
+    
+    <div>
+        {{taskforce.name}}
+    </div>
+    <div>
+        {{taskforce.missionStatement}}
+    </div>
+    <div>
+        {{taskforce.leadOrganizer}}
+    </div>
+    <div>
+        {{taskforce.contactEmail}}
+    </div>
 
 <form action="/cities/{{cityName}}/issues/{{issueIndex}}/volunteers/{{volunteerIndex}}?_method=DELETE" method="post">
     <button type="submit">
