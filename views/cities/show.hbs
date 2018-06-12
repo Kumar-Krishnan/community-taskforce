@@ -6,7 +6,7 @@
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
                 <a href="/cities"><button class="topButton">Go Back To Cities</button></a>
-                <h5>All labor that uplifts humanity has dignity 
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity 
                 and importance and should be undertaken with 
                 painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
                 </h5>
@@ -27,12 +27,13 @@
 </div>
     <h4>Users submitted community issues so far are listed below. Click one to find out more details. To submit issues, click <a href="/cities/{{city.name}}/issues/new"><span class="citiesSubmitIssues"><button>Submit Issues</button></span></a></h4> 
     {{!-- <a href="/cities/{{city.name}}/issues"> --}}
-    <div>
+    <div class="listShow">
     
         {{#each city.issues}}
             <a href="/cities/{{../city.name}}/issues/{{@index}}">
                 <div class="listBox">
-                    {{name}}        <span class="tagline">{{tagline}}</span>
+                    {{name}}
+                     <span class="tagline">{{tagline}}</span>
                 </div>
             </a>
         {{/each}}

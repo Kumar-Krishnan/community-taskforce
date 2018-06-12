@@ -18,6 +18,8 @@ nav{
   background-color: rgb(131, 241, 131);
   border-radius: 15px;
   margin:0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .topNav{
@@ -74,29 +76,52 @@ nav{
 }
 
 .listBox{
-  border:2px solid black;
+  border:2px ridge rgb(46, 42, 40);
   font-size: 20px;
 }
 .listBox{
   border-bottom:1px solid black;
 }
-.tagline{
-  font-size:13px;
-}
+
 
 .editBox, .showBody{
   background-color: orange;
   font-family: 'Inconsolata', monospace;
+  padding:5px;
+  padding-top: 10px;
+  font-size: 20px;
 }
 .editInputBox{
   background-color:rgb(248, 223, 176);
 }
-.editTitleBox, .showTitle{
+.editTitleBox, .showTitle, .showTitle h3{
   background-color: rgba(13, 100, 27, 0.932);
   color:rgb(255, 255, 255);
   padding:6px;
   border-radius:5px;
   margin-bottom: 1px;
   margin-top:1px;
+  font-size: 40px;
   font-family: 'Playfair Display SC', serif;
+  
+}
+
+.listShow, .listShow a{
+  background-color: rgb(112, 241, 192);
+  color: black;
+}
+.listBox{
+  font-size:25px;
+  padding:7px;
+}
+
+.bannerQuote{
+  font-size:25px;
+}
+
+.mlkQuote{
+  font-size: 20px;
+}
+.tagline{
+  font-size:17px;
 }

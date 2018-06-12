@@ -1,10 +1,33 @@
-<div><label for="name">Volunteer Name:</label> {{volunteer.name}} <br>
-<label for="description">Description:</label>{{volunteer.description}}
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <a href="/cities/{{cityName}}">
+                    <button class="topButton">Go Back To {{cityName}}</button>
+                </a>
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="showBody">
+    <label for="name">Volunteer Name:</label> {{volunteer.name}}
+    <br>
+    <label for="description">Description:</label>{{volunteer.description}}
+    <br>
+    <label for="description">Email:</label>{{volunteer.contactEmail}}
+    <br>
+    <label for="description">Phone:</label>{{volunteer.contactNumber}}
 
-<form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/volunteers/{{volunteerIndex}}?_method=DELETE" method="post">
-    <button type="submit">
-        DELETE
-    </button>
-</form>
+    <form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/volunteers/{{volunteerIndex}}?_method=DELETE"
+        method="post">
+        <button type="submit">
+            DELETE
+        </button>
+    </form>
 
 </div>

@@ -62,10 +62,13 @@ router.get('/:issue/edit', (req,res)=>{
 router.put('/:issue', (req,res)=>{
     const cityName = req.params.cityName
     const issueIndex = req.params.issue
+    const updatedIssue = req.body
     City.findOne({name:req.params.cityName})
     .then((city)=>{
-        city.issues[issueIndex] = req.body
-       return city.save()
+        city.issues[issueIndex].name = updatedIssue.name
+        city.issues[issueIndex].description = updatedIssue.description
+        city.issues[issueIndex].tagline = updatedIssue.tagline
+        return city.save()
 
     })
     .then((saved)=>{

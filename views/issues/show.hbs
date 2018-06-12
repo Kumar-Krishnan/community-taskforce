@@ -5,7 +5,7 @@
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
                 <a href="/cities/{{cityName}}"><button class="topButton">Go Back To {{cityName}}</button></a>
-                <h5>All labor that uplifts humanity has dignity 
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity 
                 and importance and should be undertaken with 
                 painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
                 </h5>
@@ -14,8 +14,12 @@
     </div>
 </nav>
 <div class="showTitle">
-    <h3>{{issue.name}}</h3>
-    {{issue.tagline}}
+    <h3>{{issue.name}}
+    <br>
+        <span class="tagline">{{issue.tagline}}
+        </span>
+    </h3>
+        
 </div>
 <div class="showBody">
     <br>
@@ -31,13 +35,15 @@
 </form>
 </div>
 
-<div>
+<div class="listShow">
     {{#each issue.taskforces}}
         <a href="/cities/{{../cityName}}/issues/{{../issueIndex}}/taskforces/{{@index}}">
-            <div>
-            {{name}}
-            {{leadOrganizer}}
-            {{contactEmail}}
+            <div class="listBox">
+            Task Force Name: {{name}}
+            <br>
+            Lead Organizer:{{leadOrganizer}}
+            <br>
+            Contact Info:{{contactEmail}}
             </div>
         </a>
     {{/each}}
