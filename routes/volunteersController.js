@@ -79,10 +79,13 @@ router.put('/:volunteer', (req,res)=>{
     const issueIndex = req.params.issueIndex
     const taskforceIndex = req.params.issueIndex
     const volunteerIndex = req.params.volunteer
-
+    const updatedVolunteer = req.body
     City.findOne({name: cityName})
     .then((city)=>{
-        city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating[volunteerIndex] = req.body
+        city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating[volunteerIndex].name = updatedVolunteer.name
+        city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating[volunteerIndex].description = updatedVolunteer.description
+        city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating[volunteerIndex].contactPhone = updatedVolunteer.contactPhone
+        city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating[volunteerIndex].contactEmail = updatedVolunteer.contactEmail
        return city.save()
     })
     .then(()=>{

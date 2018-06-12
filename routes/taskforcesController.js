@@ -71,7 +71,11 @@ router.put('/:taskforce', (req,res)=>{
 
     City.findOne({name: cityName})
     .then((city)=>{
-        city.issues[issueIndex].taskforces[taskforceIndex] = req.body
+        const updatedTaskforce = req.body
+        city.issues[issueIndex].taskforces[taskforceIndex].name = updatedTaskforce.name
+        city.issues[issueIndex].taskforces[taskforceIndex].missionStatement = updatedTaskforce.missionStatement
+        city.issues[issueIndex].taskforces[taskforceIndex].leadOrganizer = updatedTaskforce.leadOrganizer
+        city.issues[issueIndex].taskforces[taskforceIndex].contactEmail = updatedTaskforce.contactEmail
        return city.save()
     })
     .then(()=>{
