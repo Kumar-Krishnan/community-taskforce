@@ -34,10 +34,10 @@ The four models. Cities -> Community Issues -> Taskforces -> Volunteers
 
 ## WireFrames Used
 
-![](https://i.imgur.com/DKHoi5cm.jpg)
-![](https://i.imgur.com/YwkFIDVm.jpg)
+![](https://i.imgur.com/DKHoi5cl.jpg)
+![](https://i.imgur.com/YwkFIDVl.jpg)
 ![](https://i.imgur.com/jqdWzPXl.jpg)
-![](https://i.imgur.com/CRh8AuTm.jpg)
+![](https://i.imgur.com/CRh8AuTl.jpg)
 ![](https://i.imgur.com/oHm7oqKl.jpg)
 ![](https://i.imgur.com/vPgt0bel.jpg)
 
