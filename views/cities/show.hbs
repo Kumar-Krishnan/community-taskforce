@@ -1,14 +1,14 @@
-
-<nav >
+<nav>
     <div class="container">
-        <div class="row"> 
+        <div class="row">
             <div class="col-md-12" class="topNav">
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
-                <a href="/cities"><button class="topButton">Go Back To Cities</button></a>
-                <h5 class="bannerQuote">All labor that uplifts humanity has dignity 
-                and importance and should be undertaken with 
-                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                <a href="/cities">
+                    <button class="topButton">Go Back To Cities</button>
+                </a>
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
                 </h5>
             </div>
         </div>
@@ -16,7 +16,10 @@
 </nav>
 
 <div class="showTitle">
-    <h3> {{city.name}} <a href="/cities/{{city.name}}/edit"><button class="editRouteButton">Edit this city's details</button></a>
+    <h3> {{city.name}}
+        <a href="/cities/{{city.name}}/edit">
+            <button class="editRouteButton">Edit this city's details</button>
+        </a>
     </h3>
 </div>
 
@@ -25,33 +28,35 @@
         {{city.description}}
     </p>
 </div>
-    <h4>Users submitted community issues so 
-        far are listed below. Click one to find out 
-        more details. To submit issues, click below.
-        <br><br><br>
-        <a href="/cities/{{city.name}}/issues/new">
-            <span class="submitButton">
-                <button>
-                    Submit Issues
-                </button>
-            </span>
-        </a>
-    </h4> 
- 
 
-    <div class="listShow">
-    
-        {{#each city.issues}}
-            <a href="/cities/{{../city.name}}/issues/{{@index}}">
-                <div class="listBox">
-                    {{name}}
-                     <span class="tagline">{{tagline}}</span>
-                </div>
-            </a>
-        {{/each}}
-    
-    </div>
-    <form method="post" action="/cities/{{city.name}}?_method=DELETE">
-        <button type="submit">Remove this city from Community TaskForce</button>
-    </form>
+
+<h4>Users submitted community issues so far are listed below. Click one to find out more details. To submit issues, click below.
+    <br>
+    <br>
+    <br>
+    <a href="/cities/{{city.name}}/issues/new">
+        <span class="submitButton">
+            <button>
+                Submit Issues
+            </button>
+        </span>
+    </a>
+</h4>
+
+
+<div class="listShow">
+
+    {{#each city.issues}}
+    <a href="/cities/{{../city.name}}/issues/{{@index}}">
+        <div class="listBox">
+            {{name}}
+            <span class="tagline">{{tagline}}</span>
+        </div>
+    </a>
+    {{/each}}
+
 </div>
+
+<form method="post" action="/cities/{{city.name}}?_method=DELETE">
+    <button type="submit">Remove this city from Community TaskForce</button>
+</form>

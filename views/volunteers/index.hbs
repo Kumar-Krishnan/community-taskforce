@@ -1,12 +1,10 @@
-
-
 <div>
     <ul>
         {{#each volunteers}}
         <li>
             <a href="/cities/{{../cityName}}/issues/{{../issueIndex}}/taskforces/{{../taskforceIndex}}/volunteers/{{@index}}">
-            Name: {{name}}<br>
-            Role: {{description}}
+                Name: {{name}}
+                <br> Role: {{description}}
             </a>
         </li>
         {{/each}}

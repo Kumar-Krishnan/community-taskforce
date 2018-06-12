@@ -1,12 +1,12 @@
-<nav >
+<nav>
     <div class="container">
-        <div class="row"> 
+        <div class="row">
             <div class="col-md-12" class="topNav">
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
-                <h4>All labor that uplifts humanity has dignity 
-            and importance and should be undertaken with 
-            painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span></h4>
+                <h4>All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h4>
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
     <h3>
         Welcome! Community Member
     </h3>
-    <h4> 
+    <h4>
         Find your city, find out what issues are present, and see how you can help!
     </h4>
 </div>
@@ -24,20 +24,25 @@
 <div class="showBody">
     <h6>
         <span class="citiesDirection">
-            If you do not find your city here, please click on the new city button and add your city to the Community Taskforce service. There are others like you who are also looking to give back, take the first step and create a path for them.
+            If you do not find your city here, please click on the new city button and add your city to the Community Taskforce service.
+            There are others like you who are also looking to give back, take the first step and create a path for them.
         </span>
     </h6>
 </div>
-<a href="/cities/new"><button>New City</button></a>
+
+<a href="/cities/new">
+    <button>New City</button>
+</a>
+
 <div>
-        {{#each cities}}
-        <div class="cityBox">
-            <a href="/cities/{{name}}">
-                <h3>{{name}}</h3>
-            </a>
-            <div class="thumbnail cityImgBox">
-                <img src="{{image}}" class="cityImgPic">
-            </div>
+    {{#each cities}}
+    <div class="cityBox">
+        <a href="/cities/{{name}}">
+            <h3>{{name}}</h3>
+        </a>
+        <div class="thumbnail cityImgBox">
+            <img src="{{image}}" class="cityImgPic">
         </div>
-        {{/each}}
+    </div>
+    {{/each}}
 </div>

@@ -1,13 +1,14 @@
-<nav >
+<nav>
     <div class="container">
-        <div class="row"> 
+        <div class="row">
             <div class="col-md-12" class="topNav">
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
-                <a href="/cities/{{city.name}}"><button class="topButton">Go Back To {{city.name}}</button></a>
-                <h5>All labor that uplifts humanity has dignity 
-                and importance and should be undertaken with 
-                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                <a href="/cities/{{city.name}}">
+                    <button class="topButton">Go Back To {{city.name}}</button>
+                </a>
+                <h5>All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
                 </h5>
             </div>
         </div>
@@ -39,8 +40,10 @@
             <label for="image">City Image:</label>
             <input type="text" class="cityImageInput" name="image" value="{{city.image}}">
         </div>
-        
-        <a href="/cities/{{city.name}}"><button>Cancel</button></a>
+
+        <a href="/cities/{{city.name}}">
+            <button>Cancel</button>
+        </a>
         <button type="submit">Edit Your City!</button>
     </form>
 </div>

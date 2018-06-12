@@ -1,37 +1,40 @@
-<nav >
+<nav>
     <div class="container">
-        <div class="row"> 
+        <div class="row">
             <div class="col-md-12" class="topNav">
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
-                <a href="/cities/{{cityName}}"><button class="topButton">Go Back To {{cityName}}</button></a>
-                <h5>All labor that uplifts humanity has dignity 
-                and importance and should be undertaken with 
-                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                <a href="/cities/{{cityName}}">
+                    <button class="topButton">Go Back To {{cityName}}</button>
+                </a>
+                <h5>All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
                 </h5>
             </div>
         </div>
     </div>
 </nav>
+
 <div class="showTitle">
     <h1>
         Please Submit Issues To Tackle Here
     </h1>
 </div>
+
 <div class="showBody">
     <form action="/cities/{{cityName}}/issues/" method="post">
         <div>
             <label for="name">Name:</label>
-            <input type="text" name="name" placeholder="Issue Name"/>
+            <input type="text" name="name" placeholder="Issue Name" />
         </div>
-         <div>
+        <div>
             <label for="tagline">Issue Tagline:</label>
-            <input type="text" name="tagline" placeholder="tagline"/>
+            <input type="text" name="tagline" placeholder="tagline" />
         </div>
         <div>
             <label for="description">Issue description:</label>
-            <input type="text" name="description" placeholder="Issue Description"/>
-        </div>        
+            <input type="text" name="description" placeholder="Issue Description" />
+        </div>
         <button type="submit">Submit Issue!</button>
     </form>
 </div>

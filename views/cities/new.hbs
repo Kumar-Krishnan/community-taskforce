@@ -1,45 +1,48 @@
-
-<nav >
+<nav>
     <div class="container">
-        <div class="row"> 
+        <div class="row">
             <div class="col-md-12" class="topNav">
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
-                <a href="/cities"><button class="topButton">Go Back To Cities</button></a>
-                <h5>All labor that uplifts humanity has dignity 
-                and importance and should be undertaken with 
-                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                <a href="/cities">
+                    <button class="topButton">Go Back To Cities</button>
+                </a>
+                <h5>All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
                 </h5>
             </div>
         </div>
     </div>
 </nav>
+
 <div class="showTitle">
     <h1>
         Add Your City to the TaskForce Community
     </h1>
 </div>
+
 <div class="showBody">
     <div>
         <form action="/cities" method="post">
             <div>
                 <label for="name">City Name:</label>
-                <input type="text" name="name" placeholder="City Name"/>
+                <input type="text" name="name" placeholder="City Name" />
             </div>
             <div>
-                <label for="description">City description:</label> 
+                <label for="description">City description:</label>
                 <br>
-                <input type="text" class="cityDescriptionInput" name="description" placeholder="City Description"/>
+                <input type="text" class="cityDescriptionInput" name="description" placeholder="City Description" />
             </div>
             <div>
                 <label for="zipcode">City zipcode:</label>
-                <input type="text" name="zipcode" placeholder="zipcode"/>
+                <input type="text" name="zipcode" placeholder="zipcode" />
             </div>
             <div>
                 <label for="image">City Image:</label>
-                <input type="text" class="cityImageInput" name="image" placeholder="Enter the URL of an image you would like to use, here"/>
+                <input type="text" class="cityImageInput" name="image" placeholder="Enter the URL of an image you would like to use, here"
+                />
             </div>
-            
+
             <button type="submit">Create Your City!</button>
         </form>
     </div>

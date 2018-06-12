@@ -1,26 +1,51 @@
-<h1>Please Edit Volunteer Info Here!</h1>
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <a href="/cities/{{cityName}}">
+                    <button class="topButton"> {{cityName}}</button>
+                </a>
+                <a href="/cities/{{cityName}}/issues/{{issueIndex}}">
+                    <button class="topButton"> {{issueName}}</button>
+                </a>
+                <a href="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}">
+                    <button class="topButton">{{taskforceName}}</button>
+                </a>
 
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="showTitle">
+    <h1>Please Edit Volunteer Info Here!</h1>
+</div>
 
-<div>
+<div class="showBody">
     {{cityName}}
-    <form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/volunteers/{{volunteerIndex}}?_method=PUT" method="post">
+    <form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/volunteers/{{volunteerIndex}}?_method=PUT"
+        method="post">
         <div>
             <label for="name">Volunteer name:</label>
-            <input type="text" name="name" value="{{volunteer.name}}"/>
+            <input type="text" name="name" value="{{volunteer.name}}" />
         </div>
         <div>
             <label for="description">Volunteer description:</label>
-            <input type="text" name="description" value="{{volunteer.description}}"/>
+            <input type="text" name="description" value="{{volunteer.description}}" />
         </div>
         <div>
             <label for="volunteers">Volunteer Contact Phone:</label>
-            <input type="text" name="contactNumber" value="{{volunteer.contactNumber}}"/>
+            <input type="text" name="contactNumber" value="{{volunteer.contactNumber}}" />
         </div>
         <div>
             <label for="volunteers">Volunteer Contact Email:</label>
-            <input type="text" name="contactEmail" value="{{volunteer.contactEmail}}"/>
+            <input type="text" name="contactEmail" value="{{volunteer.contactEmail}}" />
         </div>
-        
+
         <button type="submit">Edit Volunteer Info!</button>
     </form>
 </div>
