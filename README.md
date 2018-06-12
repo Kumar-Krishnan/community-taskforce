@@ -41,3 +41,7 @@ The four models. Cities -> Community Issues -> Taskforces -> Volunteers
 ![](https://i.imgur.com/oHm7oqKl.jpg)
 ![](https://i.imgur.com/vPgt0bel.jpg)
 
+#ERD:
+
+![](https://i.imgur.com/tDePRQ9h.png)
+
