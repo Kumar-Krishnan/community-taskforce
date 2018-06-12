@@ -1,33 +1,36 @@
-<nav >
+<nav>
     <div class="container">
-        <div class="row"> 
+        <div class="row">
             <div class="col-md-12" class="topNav">
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
-                <a href="/cities/{{cityName}}"><button class="topButton">Go Back To {{cityName}}</button></a>
-                <h5 class="bannerQuote">All labor that uplifts humanity has dignity 
-                and importance and should be undertaken with 
-                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                <a href="/cities/{{cityName}}">
+                    <button class="topButton">Go Back To {{cityName}}</button>
+                </a>
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
                 </h5>
             </div>
         </div>
     </div>
 </nav>
 <div class="showTitle">
-    <h3>{{issue.name}}
-    <br>
+    <h3>{{issue.name}}     
+        <a href="/cities/{{cityName}}/issues/{{issueIndex}}/edit">
+            <button class="editRouteButton"> Edit issue
+
+            </button>
+        </a>
+        <br>
         <span class="tagline">{{issue.tagline}}
         </span>
     </h3>
-        
+
 </div>
 <div class="showBody">
-    <br>
-    {{issue.description}}
+    <br> {{issue.description}}
 </div>
 
-
-    <a href="/cities/{{cityName}}/issues/{{issueIndex}}/edit"><button> Edit issue</button></a>
 <form action="/cities/{{cityName}}/issues/{{issueIndex}}?_method=DELETE" method="post">
     <button type="submit">
         DELETE
@@ -37,14 +40,12 @@
 
 <div class="listShow">
     {{#each issue.taskforces}}
-        <a href="/cities/{{../cityName}}/issues/{{../issueIndex}}/taskforces/{{@index}}">
-            <div class="listBox">
+    <a href="/cities/{{../cityName}}/issues/{{../issueIndex}}/taskforces/{{@index}}">
+        <div class="listBox">
             Task Force Name: {{name}}
-            <br>
-            Lead Organizer:{{leadOrganizer}}
-            <br>
-            Contact Info:{{contactEmail}}
-            </div>
-        </a>
+            <br> Lead Organizer:{{leadOrganizer}}
+            <br> Contact Info:{{contactEmail}}
+        </div>
+    </a>
     {{/each}}
 </div>

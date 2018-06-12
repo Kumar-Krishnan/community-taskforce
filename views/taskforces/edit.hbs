@@ -1,7 +1,22 @@
+<nav >
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <a href="/cities/{{cityName}}"><button class="topButton">Go Back To {{cityName}}</button></a>
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity 
+                and importance and should be undertaken with 
+                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</nav>
 <h1>Please Edit Your Task Force Info Here!</h1>
 
 
-<div>
+<div class="showBody">
     {{cityName}}
     <form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}?_method=PUT" method="post">
        <div>

@@ -18,6 +18,11 @@
     
     <div class="showTitle">
         {{taskforce.name}}
+        <a href="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/edit">
+            <button  class="editRouteButton"> 
+                Edit Taskforce
+            </button>
+        </a>
     </div>
     <div class="showBody">
         Mission: {{taskforce.missionStatement}}
