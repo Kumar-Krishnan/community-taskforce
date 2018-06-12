@@ -57,7 +57,7 @@ router.post('/', (req,res)=>{
         return city.save()
     })
     .then(()=>{
-        res.redirect(`/cities/${cityName}/issues/${issueIndex}/taskforces/${taskforceIndex}/volunteers`)
+        res.redirect(`/cities/${cityName}/issues/${issueIndex}/taskforces/${taskforceIndex}/`)
     })
 })
 
