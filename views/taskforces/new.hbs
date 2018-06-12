@@ -1,8 +1,25 @@
-<h1>Create a group to Address</h1>
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <a href="/cities/{{cityName}}">
+                    <button class="topButton">Go Back To {{cityName}}</button>
+                </a>
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</nav>
 
+<div class="showTitle">
+    <h1>Create a group to Address</h1>
+</div>
 
-<div>
-    {{cityName}}
+<div class="showBody">
     <form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces" method="post">
         <div>
             <label for="name">Taskforce Name:</label>

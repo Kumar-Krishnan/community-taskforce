@@ -25,8 +25,20 @@
         {{city.description}}
     </p>
 </div>
-    <h4>Users submitted community issues so far are listed below. Click one to find out more details. To submit issues, click <a href="/cities/{{city.name}}/issues/new"><span class="citiesSubmitIssues"><button>Submit Issues</button></span></a></h4> 
-    {{!-- <a href="/cities/{{city.name}}/issues"> --}}
+    <h4>Users submitted community issues so 
+        far are listed below. Click one to find out 
+        more details. To submit issues, click below.
+        <br><br><br>
+        <a href="/cities/{{city.name}}/issues/new">
+            <span class="submitButton">
+                <button>
+                    Submit Issues
+                </button>
+            </span>
+        </a>
+    </h4> 
+ 
+
     <div class="listShow">
     
         {{#each city.issues}}
@@ -39,7 +51,6 @@
         {{/each}}
     
     </div>
-    {{!-- </a> --}}
     <form method="post" action="/cities/{{city.name}}?_method=DELETE">
         <button type="submit">Remove this city from Community TaskForce</button>
     </form>

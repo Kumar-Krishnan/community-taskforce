@@ -1,13 +1,19 @@
-<nav >
+<nav>
     <div class="container">
-        <div class="row"> 
+        <div class="row">
             <div class="col-md-12" class="topNav">
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
-                <a href="/cities/{{cityName}}"><button class="topButton">Go Back To {{cityName}}</button></a>
-                <h5 class="bannerQuote">All labor that uplifts humanity has dignity 
-                and importance and should be undertaken with 
-                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                <a href="/cities/{{cityName}}">
+                    <button class="topButton">Go Back To {{cityName}}</button>
+                </a>
+                <a href="/cities/{{cityName}}/issues/{{issueIndex}}">
+                    <button class="topButton">
+                        {{issueName}}
+                    </button>
+                </a>
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
                 </h5>
             </div>
         </div>
@@ -15,45 +21,49 @@
 </nav>
 
 <div>
-    
+
     <div class="showTitle">
         {{taskforce.name}}
         <a href="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/edit">
-            <button  class="editRouteButton"> 
+            <button class="editRouteButton">
                 Edit Taskforce
             </button>
         </a>
     </div>
+
     <div class="showBody">
         Mission: {{taskforce.missionStatement}}
-        <br>
-        Lead Organizer:{{taskforce.leadOrganizer}}
-        <br>
-        Contact:{{taskforce.contactEmail}}
-        <br>
-        Volunteers Needed Total:{{taskforce.volunteersNeeded}}
+        <br> Lead Organizer:{{taskforce.leadOrganizer}}
+        <br> Contact:{{taskforce.contactEmail}}
+        <br> Volunteers Needed Total:{{taskforce.volunteersNeeded}}
     </div>
 
-    <h3>You can find a list of volunteers signed up for this task so far, below and sign up/add your name to the roster.</h5>
-    <a href="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/volunteers/new"><span class="submitToList"><button>Volunteer</button></span></a></h4> 
+    <h3>
+        You can find a list of volunteers signed up for this task so far, below, and sign up/add your name to the roster.
+    </h3>
+
+    <a href="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/volunteers/new">
+        <span class="submitToList">
+            <button>Volunteer</button>
+        </span>
+    </a>
+
     <div class="listShow">
-    {{#each taskforce.volunteersParticipating}}
+        {{#each taskforce.volunteersParticipating}}
         <a href="/cities/{{../cityName}}/issues/{{../issueIndex}}/taskforces/{{../taskforceIndex}}/volunteers/{{@index}}">
             <div class="listBox">
-            Volunteer Name: {{name}}
-            <br>
-            Volunteer Description:{{description}}
-            <br>
-            Contact Number:{{contactNumber}}
+                Volunteer Name: {{name}}
+                <br> Volunteer Description:{{description}}
+                <br> Contact Number:{{contactNumber}}
             </div>
         </a>
-    {{/each}}
-</div>
+        {{/each}}
+    </div>
 
-<form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}?_method=DELETE" method="post">
-    <button type="submit">
-        DELETE
-    </button>
-</form>
+    <form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}?_method=DELETE" method="post">
+        <button type="submit">
+            DELETE
+        </button>
+    </form>
 
 </div>

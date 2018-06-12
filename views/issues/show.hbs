@@ -38,6 +38,18 @@
 </form>
 </div>
 
+    <h4>Taskforces created to address this specific issue are listed below. Click one to learn more
+        or click submit to start a group and volunteer to be the team lead.
+        <br><br>
+        <a href="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/new/">
+            <span class="submitButton">
+                <button>
+                    Create Taskforce
+                </button>
+            </span>
+        </a>
+    </h4> 
+
 <div class="listShow">
     {{#each issue.taskforces}}
     <a href="/cities/{{../cityName}}/issues/{{../issueIndex}}/taskforces/{{@index}}">

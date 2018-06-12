@@ -1,8 +1,35 @@
-<h1>Please Add Your Details Here If You Would Like to Volunteer to Address This Issue!</h1>
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <a href="/cities/{{cityName}}">
+                    <button class="topButton"> {{cityName}}</button>
+                </a>
+                <a href="/cities/{{cityName}}/issues/{{issueIndex}}">
+                    <button class="topButton"> {{issueName}}</button>
+                </a>
+                <a href="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}">
+                    <button class="topButton">{{taskforceName}}</button>
+                </a>
 
+                <h5 class="bannerQuote">All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+                    <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</nav>
 
-<div>
-    {{cityName}}
+<div class="showTitle">
+    <h5>Please Add Your Details Here 
+        If You Would Like to Volunteer to 
+        Address This Issue!
+    </h5>
+</div>
+
+<div class="showBody">
     <form action="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}/volunteers" method="post">
         <div>
             <label for="name">Volunteer name:</label>

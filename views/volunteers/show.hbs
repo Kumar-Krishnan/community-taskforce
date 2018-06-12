@@ -5,8 +5,15 @@
                 <button class="topButton">Our Mission/Vision</button>
                 <button class="topButton">How To Use This Site</button>
                 <a href="/cities/{{cityName}}">
-                    <button class="topButton">Go Back To {{cityName}}</button>
+                    <button class="topButton">{{cityName}}</button>
                 </a>
+                <a href="/cities/{{cityName}}/issues/{{issueIndex}}">
+                    <button class="topButton"> {{issueName}}</button>
+                </a>
+                <a href="/cities/{{cityName}}/issues/{{issueIndex}}/taskforces/{{taskforceIndex}}">
+                    <button class="topButton">{{taskforceName}}</button>
+                </a>
+
                 <h5 class="bannerQuote">All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
                     <span class="mlkQuote"> -Martin Luther King Jr.</span>
                 </h5>

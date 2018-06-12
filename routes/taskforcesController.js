@@ -31,8 +31,9 @@ router.get('/:taskforce', (req,res)=>{
 
     City.findOne({name: cityName})
     .then((city)=>{
+        issueName = city.issues[issueIndex].name
         taskforce = city.issues[issueIndex].taskforces[taskforceIndex]
-        res.render('taskforces/show', {taskforce, cityName, issueIndex, taskforceIndex})
+        res.render('taskforces/show', {taskforce, cityName, issueIndex, taskforceIndex, issueName})
     })
 })
 

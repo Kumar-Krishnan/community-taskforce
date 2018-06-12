@@ -22,7 +22,13 @@ router.get('/new',(req,res)=>{
     cityName = req.params.cityName
     issueIndex = req.params.issueIndex
     taskforceIndex = req.params.taskforceIndex
-    res.render('volunteers/new', {cityName,issueIndex,taskforceIndex})
+    City.findOne({name:cityName})
+    .then((city)=>{
+        issueName = city.issues[issueIndex].name
+        taskforceName = city.issues[issueIndex].taskforces[taskforceIndex].name
+        res.render('volunteers/new', {cityName,issueIndex,taskforceIndex, taskforceName, issueName})
+    })
+
 })
 
 router.get('/:volunteer', (req,res)=>{
@@ -33,8 +39,10 @@ router.get('/:volunteer', (req,res)=>{
 
     City.findOne({name: cityName})
     .then((city)=>{
+        issueName = city.issues[issueIndex].name
+        taskforceName = city.issues[issueIndex].taskforces[taskforceIndex].name
         volunteer = city.issues[issueIndex].taskforces[taskforceIndex].volunteersParticipating[volunteerIndex]
-        res.render('volunteers/show', {volunteer, cityName, issueIndex, volunteerIndex,taskforceIndex})
+        res.render('volunteers/show', {volunteer, cityName, issueIndex, volunteerIndex,taskforceIndex, issueName,taskforceName})
     })
 })
 

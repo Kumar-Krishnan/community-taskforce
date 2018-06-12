@@ -1,4 +1,3 @@
-<h1>Please Add Issues You Would Like Addressed Here!</h1>
 <nav >
     <div class="container">
         <div class="row"> 
@@ -14,11 +13,15 @@
         </div>
     </div>
 </nav>
-<div>
-    {{cityName}}
+<div class="showTitle">
+    <h1>
+        Please Submit Issues To Tackle Here
+    </h1>
+</div>
+<div class="showBody">
     <form action="/cities/{{cityName}}/issues/" method="post">
         <div>
-            <label for="name">name:</label>
+            <label for="name">Name:</label>
             <input type="text" name="name" placeholder="Issue Name"/>
         </div>
          <div>
@@ -31,8 +34,4 @@
         </div>        
         <button type="submit">Submit Issue!</button>
     </form>
-</div>
-
-<div class="thumbnail">
-    <img class="bannerImg" src="https://i.imgur.com/V8bGe6Ql.jpg">
 </div>
