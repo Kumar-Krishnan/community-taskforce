@@ -16,11 +16,11 @@
     </div>
 </nav>
 
-<div class="editTitleBox">
+<div class="showTitle">
     <h4>Edit details of {{issue.name}}, a community issue in {{cityName}}</h4>
 </div>
 
-<div class="editBox">
+<div class="showBody">
     <form action="/cities/{{cityName}}/issues/{{issueIndex}}?_method=PUT" method="post">
         <div>
             <label for="name">Name:</label>

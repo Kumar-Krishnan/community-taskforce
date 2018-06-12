@@ -1,12 +1,12 @@
 body {
-  padding-top:10px;
+  padding-top: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin-left: 5vw;
   margin-right: 5vw;
   background-color: rgba(190, 248, 183, 0.452)
 }
 
-*{
+* {
   font-family: 'Inconsolata', monospace;
 }
 
@@ -14,119 +14,110 @@ a {
   color: #00B7FF;
 }
 
-nav{
+nav {
   padding: 20px;
   background-color: rgb(131, 241, 131);
   border-radius: 15px;
-  margin:0;
+  margin: 0;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.topNav{
-  display:inline;
+.topNav {
+  display: inline;
 }
 
-.topButton{
+.topButton {
   padding: 5px;
 }
 
-.mlkQuote{
-  font-size: 15px;
-}
-
-.cityBox{
-  height:400px;
+.cityBox {
+  height: 400px;
   text-align: center;
   align-content: center;
 }
-.cityImg{
-  width:300px;
+
+.cityImgBox {
+  width: 300px;
   height: 300px;
   display: inline-block;
   background-color: rgb(215, 255, 215)
 }
 
-.cityImgPic{
-  max-height:280px;
+.cityImgPic {
+  max-height: 280px;
 }
 
-.cityNewContainer{
-  background-color: rgba(50, 240, 215, 0.342); 
-  border-radius: 10px;
-}
-.cityDescriptionInput{
-  width:600px;
-  height:50px;
+.cityDescriptionInput {
+  width: 600px;
+  height: 50px;
 }
 
-.cityImageInput{
-  width:400px;
+.cityImageInput {
+  width: 400px;
 }
 
-.editRouteButton{
+.editRouteButton {
   font-size: 10px;
 }
 
-.bannerImg{
+.bannerImg {
   width: 95vw
 }
 
-.submitButton{
+.submitButton {
   font-size: 20px;
 }
 
-.listBox{
-  border:2px ridge rgb(46, 42, 40);
-  font-size: 20px;
-}
-.listBox{
-  border-bottom:1px solid black;
+.listBox {
+  border: 2px ridge rgb(46, 42, 40);
+  border-bottom: 1px solid black;
+  font-size: 25px;
+  padding: 7px;
 }
 
-
-.editBox, .showBody{
+.showBody {
   background-color: orange;
   font-family: 'Inconsolata', monospace;
-  padding:5px;
+  padding: 5px;
   padding-top: 10px;
   font-size: 20px;
 }
-.editInputBox{
-  background-color:rgb(248, 223, 176);
-}
-.editTitleBox, .showTitle, .showTitle h3{
-  background-color: rgba(13, 100, 27, 0.932);
-  color:rgb(255, 255, 255);
-  padding:6px;
-  border-radius:5px;
-  margin-bottom: 1px;
-  margin-top:1px;
-  font-size: 40px;
-  font-family: 'Playfair Display SC', serif;
-  
+
+.editInputBox {
+  background-color: rgb(248, 223, 176);
 }
 
-.listShow, .listShow a{
+.showTitle,
+.showTitle h3 {
+  background-color: rgba(13, 100, 27, 0.932);
+  color: rgb(255, 255, 255);
+  padding: 6px;
+  border-radius: 5px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  font-size: 40px;
+  font-family: 'Playfair Display SC', serif;
+}
+
+.listShow,
+.listShow a {
   background-color: rgb(112, 241, 192);
   color: black;
 }
-.listBox{
-  font-size:25px;
-  padding:7px;
+
+.bannerQuote {
+  font-size: 25px;
 }
 
-.bannerQuote{
-  font-size:25px;
-}
-
-.mlkQuote{
+.mlkQuote {
   font-size: 20px;
 }
-.tagline{
-  font-size:17px;
+
+.tagline {
+  font-size: 17px;
 }
 
-.citiesDirection{
-  font-size:20px;
+.citiesDirection {
+  font-size: 20px;
 }
