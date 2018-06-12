@@ -14,23 +14,28 @@
         </div>
     </div>
 </nav>
-<h3> {{city.name}} <a href="/cities/{{city.name}}/edit"><button class="cityEditRouteButton">Edit this city's details</button></a></h3>
 
-<div>
+<div class="showTitle">
+    <h3> {{city.name}} <a href="/cities/{{city.name}}/edit"><button class="cityEditRouteButton">Edit this city's details</button></a>
+    </h3>
+</div>
+
+<div class="showBody">
     <p>
         {{city.description}}
     </p>
-    <h4>Users submitted community issues so far are listed below. Click one to find out more details. To submit issues, click <a href="/cities/{{city.name}}/issues/new"><button>Submit Issues</button></a></h4> 
+</div>
+    <h4>Users submitted community issues so far are listed below. Click one to find out more details. To submit issues, click <a href="/cities/{{city.name}}/issues/new"><span class="citiesSubmitIssues"><button>Submit Issues</button></span></a></h4> 
     {{!-- <a href="/cities/{{city.name}}/issues"> --}}
     <div>
     
-        <ul>
-            {{#each city.issues}}
-            <li>
-                <a href="/cities/{{../city.name}}/issues/{{@index}}">{{name}}</a>
-            </li>
-                {{/each}}
-        </ul>
+        {{#each city.issues}}
+            <a href="/cities/{{../city.name}}/issues/{{@index}}">
+                <div class="listBox">
+                    {{name}}        <span class="tagline">{{tagline}}</span>
+                </div>
+            </a>
+        {{/each}}
     
     </div>
     {{!-- </a> --}}

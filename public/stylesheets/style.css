@@ -1,7 +1,12 @@
 body {
   padding-top:10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
 
+*{
+  font-family: 'Inconsolata', monospace;
 }
 
 a {
@@ -62,4 +67,36 @@ nav{
 
 .bannerImg{
   width: 95vw
+}
+
+.citiesSubmitIssues{
+  font-size: 12px;
+}
+
+.listBox{
+  border:2px solid black;
+  font-size: 20px;
+}
+.listBox{
+  border-bottom:1px solid black;
+}
+.tagline{
+  font-size:13px;
+}
+
+.editBox, .showBody{
+  background-color: orange;
+  font-family: 'Inconsolata', monospace;
+}
+.editInputBox{
+  background-color:rgb(248, 223, 176);
+}
+.editTitleBox, .showTitle{
+  background-color: rgba(13, 100, 27, 0.932);
+  color:rgb(255, 255, 255);
+  padding:6px;
+  border-radius:5px;
+  margin-bottom: 1px;
+  margin-top:1px;
+  font-family: 'Playfair Display SC', serif;
 }

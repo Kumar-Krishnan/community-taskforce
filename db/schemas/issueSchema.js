@@ -7,11 +7,7 @@ const issueSchema = new Schema({
         required: true
     },
     description: String,
-    // numberOfVolunteersNeeded: Number,
-    // volunteersAmount: {
-    //     type: Number,
-    //     default: 0
-    // },
+    tagline: String,
     taskforces: [taskforceSchema]
 
 })

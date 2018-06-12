@@ -1,30 +1,40 @@
-<h1>Please Edit Issues Submitted Here!</h1>
 
+<nav >
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-12" class="topNav">
+                <button class="topButton">Our Mission/Vision</button>
+                <button class="topButton">How To Use This Site</button>
+                <a href="/cities/{{cityName}}"><button class="topButton">Go Back To {{cityName}}</button></a>
+                <h5>All labor that uplifts humanity has dignity 
+                and importance and should be undertaken with 
+                painstaking excellence. <span class="mlkQuote"> -Martin Luther King Jr.</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</nav>
 
-<div>
-    {{cityName}}
+<div class="editTitleBox">
+    <h4>Edit details of {{issue.name}}, a community issue in {{cityName}}</h4>
+</div>
+
+<div class="editBox">
     <form action="/cities/{{cityName}}/issues/{{issueIndex}}?_method=PUT" method="post">
         <div>
-            <label for="name">name:</label>
-            <input type="text" name="name" value="{{issue.name}}"/>
+            <label for="name">Name:</label>
+            <input class="editInputBox" type="text" name="name" value="{{issue.name}}"/>
         </div>
-        <div>
-            <label for="city">City</label>
-            <input type="text" name="city" value="{{issue.city}}"/>
+         <div>
+            <label for="tagline">Issue Tagline:</label>
+            <input type="text" class="editInputBox" name="tagline" value="{{issue.tagline}}"/>
         </div>
         <div>
             <label for="description">Issue description:</label>
-            <input type="text" name="description" value="{{issue.description}}"/>
-        </div>
-        <div>
-            <label for="volunteers">Volunteers Needed Amount:</label>
-            <input type="text" name="numberOfVolunteersNeeded" value="{{issue.numberOfVolunteersNeeded}}"/>
-        </div>
-        <div>
-            <label for="volunteers">Number of Volunteers On Current Issue:</label>
-            <input type="text" name="volunteers" value="{{issue.volunteers}}"/>
-        </div>
-        
-        <button type="submit">Edit Issue!</button>
+            <input type="text" class="editInputBox" name="description" value="{{issue.description}}"/>
+        </div>  
+        <br>
+        <br>
+        <button type="submit">Update Issue!</button>
     </form>
 </div>

@@ -56,12 +56,14 @@ City.remove()
         const issue1 = new Issue({
             name: "Public Wifi",
             description: "Buddha",
+            tagline: "Utilizing spare hardware and a bit of ingenuity to ensure every citizen of TVM has access to the internet",
             taskforces: [taskforce1,taskforce2]
         })
 
         const issue2 = new Issue({
             name: "Hydroponics",
             description: "baby don't hurt me",
+            tagline: "Helping to reduce emissions in transport, water usage and put TVM in charge of its food production, giving citizens access to the process of agriculture",
             taskforces: [taskforce1,taskforce2]
         })
 
