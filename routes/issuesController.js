@@ -30,7 +30,6 @@ router.get('/new', (req, res) => {
     res.render('issues/new', {
         cityName
     })
-    .catch((err) => res.send(err))
 })
 
 router.post('/', (req, res) => {
