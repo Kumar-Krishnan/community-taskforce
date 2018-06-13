@@ -6,7 +6,6 @@ const City = require('../models/City')
 router.get('/', (req, res) => {
     City.find()
         .then((cities) => {
-            console.log(cities)
             res.render('cities/index', {
                 cities
             })
